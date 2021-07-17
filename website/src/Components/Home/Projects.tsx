@@ -1,9 +1,14 @@
 import React from 'react'
+import styled from 'styled-components';
 
 export const Projects = () => {
     return (
-        <div>
+        <Container>
             
-        </div>
+        </Container>
     )
-}
+};
+
+const Container = styled.div`
+
+`;

@@ -3,6 +3,7 @@ import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
 import pc from '../../logo/pc.webp';
+import { ImageCarousel } from './ImageCarousel';
 
 export const Banner = () => {
 
@@ -23,6 +24,12 @@ export const Banner = () => {
                 <Box className={classes.pcImageCont}>
 
                     <img className={classes.pcImage} src={pc} alt='' />
+
+                    <Box className={classes.carouselBox}>
+
+                        <ImageCarousel />
+                        
+                    </Box>
 
                 </Box>
             </Box>
@@ -100,5 +107,13 @@ const useStyles = makeStyles(theme=>({
     pcImage: {
         width: '100%',
         height: '100%'
+    },
+
+    carouselBox: {
+        position: 'absolute',
+        width: '355px',
+        height: '250px',
+        top: '24px',
+        right: '20px'
     }
 }));
