@@ -75,7 +75,12 @@ const useStyles = makeStyles(theme=>({
         width: '70%',
         margin: 'auto',
         textAlign: 'center',
-        padding: theme.spacing(10)
+        padding: theme.spacing(10),
+
+        [theme.breakpoints.down(500)]: {
+            width: '90%',
+            padding: theme.spacing(10, 0, 7)
+        }
     },
 
     projects: {
@@ -86,6 +91,10 @@ const useStyles = makeStyles(theme=>({
         alignItems: 'center',
         justifyContent: 'center',
         flexWrap: 'wrap',
-        borderBottom: '2px solid #424242'
+        borderBottom: '1px solid #424242',
+
+        [theme.breakpoints.down(500)]: {
+            width: '90%'
+        }
     }
 }));

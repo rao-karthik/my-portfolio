@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { Banner } from './Banner';
 import { Projects } from './Projects';
+import { TechStack } from './TechStack';
 
 export default function Home () {
 
@@ -12,6 +13,8 @@ export default function Home () {
             <Banner />
 
             <Projects />
+
+            <TechStack />
 
         </Container>
     )

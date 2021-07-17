@@ -4,16 +4,39 @@ import { Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import Home from '../Pages/Home';
 import styled from 'styled-components';
+import Footer from './Footer/Footer';
+import About from '../Pages/About';
+import Contact from '../Pages/Contact';
 
 export default function Routes () {
     return (
         <Container>
             <Navbar />
+
             <Switch>
-                <Route path='/'>
+                
+                <Route path='/' exact>
+
                     <Home />
+
                 </Route>
+
+                <Route path='/about' exact>
+
+                    <About />
+
+                </Route>
+
+                <Route path='/contact' exact>
+
+                    <Contact />
+
+                </Route>
+
             </Switch>
+
+            <Footer />
+
         </Container>
     )
 };

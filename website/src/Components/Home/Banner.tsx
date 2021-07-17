@@ -51,6 +51,10 @@ const useStyles = makeStyles(theme=>({
         alignItems: 'center',
         margin: 'auto',
         borderBottom: '1px solid #424242',
+
+        [theme.breakpoints.down(500)]: {
+            width: '90%'
+        }
     },
     
     nameBox: {
@@ -69,29 +73,35 @@ const useStyles = makeStyles(theme=>({
             height: '400px'
         },
 
-        [theme.breakpoints.down(1025)]: {
-            height: '500px'
+        [theme.breakpoints.down(1030)]: {
+            height: '500px',
+            paddingRight: '30px'
         }
     },
 
     name: {
+        color: '#59bfc7',
         fontSize: '70px',
         fontWeight: 600,
 
-        [theme.breakpoints.down(500)]: {
+        [theme.breakpoints.down(550)]: {
             lineHeight: '72px',
             textAlign: 'center'
         },
 
-        [theme.breakpoints.up(500)]: {
+        [theme.breakpoints.up(550)]: {
             marginTop: '-80px'
+        },
+
+        [theme.breakpoints.down(1030)]: {
+            lineHeight: '72px',
         },
     },
 
     headText: {
         color: '#a9a9a9',
 
-        [theme.breakpoints.down(500)]: {
+        [theme.breakpoints.down(550)]: {
             textAlign: 'center'
         },
     },
@@ -101,7 +111,7 @@ const useStyles = makeStyles(theme=>({
         height: '400px',
         position: 'relative',
 
-        [theme.breakpoints.down(500)]: {
+        [theme.breakpoints.down(770)]: {
             display: 'none'
         },
     },
@@ -116,6 +126,11 @@ const useStyles = makeStyles(theme=>({
         width: '355px',
         height: '250px',
         top: '24px',
-        right: '20px'
+        right: '20px',
+
+        [theme.breakpoints.down(1030)]: {
+            width: '290px',
+            right: '18px'
+        }
     }
 }));
