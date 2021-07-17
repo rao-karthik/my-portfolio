@@ -3,9 +3,6 @@ import Carousel from 'react-material-ui-carousel';
 import styled from 'styled-components';
 
 import { ImageCarousalItem } from './ImageCarouselItem';
-import linkedIn from '../../logo/LinkedIn.png';
-import indeed from '../../logo/Indeed.png';
-import himalaya from '../../logo/Himalaya.png';
 
 export interface IImageCarouselProps {
     image: string
@@ -14,13 +11,13 @@ export interface IImageCarouselProps {
 export const ImageCarousel = () => {
     var items: Array<IImageCarouselProps> = [
         {
-            image: linkedIn
+            image: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Projects%2FLinkedIn.png?alt=media&token=1d37dac1-5bfd-4ba2-b11f-ba3aa4ecb173"
         },
         {
-            image: indeed
+            image: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Projects%2FIndeed.png?alt=media&token=d279368e-fdb7-4b05-baa0-e1b86b11f32b"
         },
         {
-            image: himalaya
+            image: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Projects%2FHimalaya.png?alt=media&token=297b260e-d943-43ab-93d8-89b73f9b8921"
         }
     ]
 

@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import clsx from 'clsx';
 import { HamburgerNavbar } from './HamburgerDrawer';
 
-import whiteLogo from '../../logo/whiteLogo.png';
 import { NavLink } from 'react-router-dom';
 
 export default function Navbar () {
@@ -40,7 +39,7 @@ export default function Navbar () {
 
                             <Box className={classes.imageBox}>
                                 
-                                <img className={classes.image} src={whiteLogo} alt='Kartik' />
+                                <img className={classes.image} src="https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Logos%2FwhiteLogo.png?alt=media&token=e4729a66-a49a-4711-8f1b-b8bb9e095d93" alt='Kartik' />
 
                             </Box>
 

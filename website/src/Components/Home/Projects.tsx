@@ -3,10 +3,6 @@ import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import { SingleProjectComp } from './SingleProjectComp';
 
-import linkedIn from '../../logo/LinkedIn.png';
-import indeed from '../../logo/Indeed.png';
-import himalaya from '../../logo/Himalaya.png';
-
 export interface IProjectList {
     title: string;
     imageTitle: string;
@@ -19,21 +15,21 @@ const projectList: IProjectList[] = [
     {
         title: 'Linked Learning Clone',
         imageTitle: 'Linked Learning',
-        imageUrl: linkedIn,
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Projects%2FLinkedIn.png?alt=media&token=1d37dac1-5bfd-4ba2-b11f-ba3aa4ecb173",
         description: 'LinkedIn Learning is an e-Learning Platform. Here I have done the homePage, signIn and signUp functionality.',
         githubLink: 'https://github.com/ashish8796/linkedin-learning-clone'
     },
     {
         title: 'Indeed Clone',
         imageTitle: 'Indeed',
-        imageUrl: indeed,
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Projects%2FIndeed.png?alt=media&token=d279368e-fdb7-4b05-baa0-e1b86b11f32b",
         description: 'Indeed is a job where users can search for jobs. Here I have done the homePage, signIn and signUp functionality.',
         githubLink: 'https://github.com/Rskamra002/Indeed-Clone'
     },
     {
         title: 'Himalaya Clone',
         imageTitle: 'Himalaya',
-        imageUrl: himalaya,
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Projects%2FHimalaya.png?alt=media&token=297b260e-d943-43ab-93d8-89b73f9b8921",
         description: 'Himalaya is a herbal product e-commerce website. Here I have done the homePage, signIn and signUp functionality.',
         githubLink: 'https://github.com/rao-kartik/himalaya-clone'
     },

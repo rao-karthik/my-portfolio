@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
-import pc from '../../logo/pc.webp';
 import { ImageCarousel } from './ImageCarousel';
 
 export const Banner = () => {
@@ -23,7 +22,7 @@ export const Banner = () => {
 
                 <Box className={classes.pcImageCont}>
 
-                    <img className={classes.pcImage} src={pc} alt='' />
+                    <img className={classes.pcImage} src="https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Pictures%2Fpc.webp?alt=media&token=bd8c9e89-6d66-43f1-a664-dfdda4282aa5" alt='' />
 
                     <Box className={classes.carouselBox}>
 
