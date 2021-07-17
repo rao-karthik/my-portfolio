@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Banner } from './Banner';
+import { Projects } from './Projects';
 
 export default function Home () {
 
@@ -9,6 +10,8 @@ export default function Home () {
         <Container>
 
             <Banner />
+
+            <Projects />
 
         </Container>
     )

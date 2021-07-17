@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { ImageCarousalItem } from './ImageCarouselItem';
 import linkedIn from '../../logo/LinkedIn.png';
 import indeed from '../../logo/Indeed.png';
+import himalaya from '../../logo/Himalaya.png';
 
 export interface IImageCarouselProps {
     image: string
@@ -17,6 +18,9 @@ export const ImageCarousel = () => {
         },
         {
             image: indeed
+        },
+        {
+            image: himalaya
         }
     ]
 
