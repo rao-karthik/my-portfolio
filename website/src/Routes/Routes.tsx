@@ -10,7 +10,7 @@ export default function Routes () {
         <Container>
             <Navbar />
             <Switch>
-                <Route>
+                <Route path='/'>
                     <Home />
                 </Route>
             </Switch>

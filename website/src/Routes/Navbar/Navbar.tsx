@@ -7,6 +7,7 @@ import clsx from 'clsx';
 import { HamburgerNavbar } from './HamburgerDrawer';
 
 import whiteLogo from '../../logo/whiteLogo.png';
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar () {
 
@@ -43,23 +44,23 @@ export default function Navbar () {
 
                             </Box>
 
-                            <Box className={classes.tagCont}>
+                            <NavLink to='/' className={classes.tagCont} exact activeClassName={classes.activeTag} >
 
-                                <Typography className={classes.tags}>Home</Typography>
-                                
-                            </Box>
+                                    <Typography className={classes.tags}>Home</Typography>
 
-                            <Box className={classes.tagCont}>
+                            </NavLink>
+
+                            <NavLink to='/about' className={classes.tagCont} exact activeClassName={classes.activeTag} >
 
                                 <Typography className={classes.tags}>About</Typography>
                                 
-                            </Box>
+                            </NavLink>
 
-                            <Box className={classes.tagCont}>
+                            <NavLink to='/contact' className={classes.tagCont} exact activeClassName={classes.activeTag} >
 
                                 <Typography className={classes.tags}>Contact me</Typography>
                                 
-                            </Box>
+                            </NavLink>
 
                     </Box>
             </AppBar>
@@ -76,8 +77,8 @@ const drawerWidth = 260;
 
 const useStyles = makeStyles(theme=>({
     appBar: {
-        background: '#000',
-        height: '80px',
+        background: '#121212',
+        height: '70px',
         position: 'relative',
         display: 'flex',
         justifyContent: 'center',
@@ -86,6 +87,7 @@ const useStyles = makeStyles(theme=>({
             duration: theme.transitions.duration.leavingScreen,
         }),
     },
+
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
         marginLeft: drawerWidth,
@@ -94,6 +96,7 @@ const useStyles = makeStyles(theme=>({
             duration: theme.transitions.duration.enteringScreen,
         }),
     },
+
     menuIcon: {
         cursor: 'pointer',
         fontSize: '36px',
@@ -103,6 +106,7 @@ const useStyles = makeStyles(theme=>({
             display: 'none'
         },
     },
+    
     mainCont: {
         minWidth: '900px',
         width: '70%',
@@ -115,19 +119,35 @@ const useStyles = makeStyles(theme=>({
             display: 'none'
         }
     },
+
     imageBox: {
         width: '50px'
     },
+
     image: {
         width: '100%',
         height: '100%'
     },
+
     tagCont: {
-        height: '100%',
         marginLeft: '30px',
+        textDecoration: 'none',
+        color: '#fff',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+
+        '&:hover': {
+            borderBottom: '2px solid red'
+        }
     },
+
+    activeTag: {
+        borderBottom: '2px solid red',
+        color: 'red'
+    },
+
     tags: {
         fontSize: '20px',
-        position: 'absolute'
     }
 }));
