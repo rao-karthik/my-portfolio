@@ -20,7 +20,7 @@ export const TechStack = () => {
 
                 <Grid container spacing={3}>
 
-                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
+                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3} className={classes.gridItems}>
 
                         <Box className={classes.techIcons}>
 
@@ -53,11 +53,13 @@ export const TechStack = () => {
                                 </g>
                             </svg>
 
+                            <Typography className={classes.iconName}>Typescript</Typography>
+
                         </Box>
 
                     </Grid>
 
-                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
+                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3} className={classes.gridItems}>
 
                         <Box className={classes.techIcons}>
                             
@@ -86,11 +88,13 @@ export const TechStack = () => {
                                 </g>
                             </svg>
 
+                            <Typography className={classes.iconName}>Javascript</Typography>
+
                         </Box>
 
                     </Grid>
 
-                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
+                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3} className={classes.gridItems}>
 
                         <Box className={classes.techIcons}>
                             
@@ -130,11 +134,13 @@ export const TechStack = () => {
                                 </g>
                             </svg>
 
+                            <Typography className={classes.iconName}>React</Typography>
+
                         </Box>
 
                     </Grid>
 
-                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
+                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3} className={classes.gridItems}>
 
                         <Box className={classes.techIcons}>
                             
@@ -167,11 +173,13 @@ export const TechStack = () => {
                                 </g>
                             </svg>
 
+                            <Typography className={classes.iconName}>HTML 5</Typography>
+
                         </Box>
 
                     </Grid>
 
-                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
+                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3} className={classes.gridItems}>
 
                         <Box className={classes.techIcons}>
                             
@@ -213,11 +221,13 @@ export const TechStack = () => {
                                 </g>
                             </svg>
 
+                            <Typography className={classes.iconName}>Material UI</Typography>
+
                         </Box>
 
                     </Grid>
 
-                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
+                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3} className={classes.gridItems}>
 
                         <Box className={classes.techIcons}>
                             
@@ -254,11 +264,13 @@ export const TechStack = () => {
                                 </g>
                             </svg>
 
+                            <Typography className={classes.iconName}>Bootstrap</Typography>
+
                         </Box>
 
                     </Grid>
 
-                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
+                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3} className={classes.gridItems}>
 
                         <Box className={classes.techIcons}>
                             
@@ -292,11 +304,13 @@ export const TechStack = () => {
                                 </g>
                             </svg>
 
+                            <Typography className={classes.iconName}>NodeJS</Typography>
+
                         </Box>
 
                     </Grid>
 
-                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
+                    <Grid item xs={6} sm={4} md={3} lg={3} xl={3} className={classes.gridItems}>
 
                         <Box className={classes.techIcons}>
                             
@@ -345,6 +359,8 @@ export const TechStack = () => {
                                 </g>
                             </svg>
 
+                            <Typography className={classes.iconName}>MongoDB</Typography>
+
                         </Box>
 
                     </Grid>
@@ -357,7 +373,7 @@ export const TechStack = () => {
 }
 
 const Container = styled.div`
-
+    width: 100%;
 `;
 
 const useStyles = makeStyles(theme=>({
@@ -396,8 +412,22 @@ const useStyles = makeStyles(theme=>({
         }
     },
 
+    gridItems: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
     techIcons: {
         width: 100,
-        height: 100
+        height: 100,
+        marginTop: 10,
+    },
+
+    iconName: {
+        color: '#bdbdbd',
+        textAlign: 'center',
+        fontSize: '14px'
     }
 }));

@@ -10,9 +10,12 @@ export const Banner = () => {
 
     return (
         <Container>
+            
             <Box className={classes.headCont}>
 
                 <Box className={classes.nameBox}>
+
+                    <img src='' alt='' />
 
                     <Typography className={classes.name}>Kartik Yadav</Typography>
 
@@ -31,7 +34,9 @@ export const Banner = () => {
                     </Box>
 
                 </Box>
+
             </Box>
+
         </Container>
     )
 }
