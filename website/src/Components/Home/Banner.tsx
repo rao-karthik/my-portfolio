@@ -22,7 +22,7 @@ export const Banner = () => {
 
                 <Box className={classes.pcImageCont}>
 
-                    <img className={classes.pcImage} src="https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Pictures%2Fpc.webp?alt=media&token=bd8c9e89-6d66-43f1-a664-dfdda4282aa5" alt='' />
+                    <img className={classes.pcImage} src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Pictures%2Fpc.webp?alt=media&token=18132b6b-310e-4981-804e-8b09c9e7c936" alt='' />
 
                     <Box className={classes.carouselBox}>
 
@@ -79,7 +79,7 @@ const useStyles = makeStyles(theme=>({
     },
 
     name: {
-        color: '#59bfc7',
+        color: '#58ba9d',
         fontSize: '70px',
         fontWeight: 600,
 

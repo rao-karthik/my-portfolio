@@ -78,7 +78,7 @@ const useStyles = makeStyles({
     },
 
     head: {
-        color: 'teal'
+        color: '#58ba9d'
     },
 
     githubCont: {
@@ -88,7 +88,7 @@ const useStyles = makeStyles({
     },
 
     github: {
-        color: 'teal',
+        color: '#58ba9d',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

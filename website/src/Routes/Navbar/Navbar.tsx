@@ -39,7 +39,7 @@ export default function Navbar () {
 
                             <Box className={classes.imageBox}>
                                 
-                                <img className={classes.image} src="https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Logos%2FwhiteLogo.png?alt=media&token=e4729a66-a49a-4711-8f1b-b8bb9e095d93" alt='Kartik' />
+                                <img className={classes.image} src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Logo%2FwhiteLogo.png?alt=media&token=faa28b65-bac4-4a80-9f48-cfeba46a9db3" alt='Kartik' />
 
                             </Box>
 

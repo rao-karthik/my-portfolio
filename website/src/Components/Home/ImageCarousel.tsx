@@ -11,13 +11,13 @@ export interface IImageCarouselProps {
 export const ImageCarousel = () => {
     var items: Array<IImageCarouselProps> = [
         {
-            image: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Projects%2FLinkedIn.png?alt=media&token=1d37dac1-5bfd-4ba2-b11f-ba3aa4ecb173"
+            image: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2FLinkedIn.png?alt=media&token=41b96f1c-82af-42a4-b198-468ef06e4113"
         },
         {
-            image: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Projects%2FIndeed.png?alt=media&token=d279368e-fdb7-4b05-baa0-e1b86b11f32b"
+            image: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2FIndeed.png?alt=media&token=c67e42e7-6426-4dad-a843-0d1d3e9e1af8"
         },
         {
-            image: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-21f22.appspot.com/o/Projects%2FHimalaya.png?alt=media&token=297b260e-d943-43ab-93d8-89b73f9b8921"
+            image: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2FHimalaya.png?alt=media&token=e7ff9b20-6736-4498-94c3-66a755f9d5b2"
         }
     ]
 

@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme=>({
         borderTop: '1px solid #424242'
     },
     iconLink: {
-        color: 'teal',
+        color: '#58ba9d',
         textDecoration: 'none',
         display: 'flex',
         alignItems: 'center',
