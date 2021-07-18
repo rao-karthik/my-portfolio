@@ -30,14 +30,19 @@ const Container = styled.div`
     height: 250px;
 `;
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme=>({
     imagePaper: {
         width: '100%',
-        height: '250px'
+        height: '250px',
+
+
+        [theme.breakpoints.down(1025)]: {
+            height: '185px'
+        },
     },
     image: {
         width: '100%',
         height: '100%',
-        borderRadius: '3px'
+        borderRadius: '3px',
     }
-});
+}));

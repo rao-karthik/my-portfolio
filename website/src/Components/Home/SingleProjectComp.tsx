@@ -68,7 +68,7 @@ const Container = styled.div`
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      maxWidth: 330,
       paddingTop: 5,
     },
 

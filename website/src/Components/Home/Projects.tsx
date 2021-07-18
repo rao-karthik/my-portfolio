@@ -91,6 +91,10 @@ const useStyles = makeStyles(theme=>({
 
         [theme.breakpoints.down(500)]: {
             width: '90%'
+        },
+
+        [theme.breakpoints.down(1025)]: {
+            width: '80%'
         }
     }
 }));

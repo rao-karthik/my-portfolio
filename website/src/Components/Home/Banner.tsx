@@ -113,6 +113,10 @@ const useStyles = makeStyles(theme=>({
         [theme.breakpoints.down(770)]: {
             display: 'none'
         },
+
+        [theme.breakpoints.down(1025)]: {
+            height: '300px'
+        },
     },
 
     pcImage: {
@@ -130,6 +134,12 @@ const useStyles = makeStyles(theme=>({
         [theme.breakpoints.down(1030)]: {
             width: '290px',
             right: '18px'
-        }
+        },
+
+        [theme.breakpoints.down(1025)]: {
+            width: '288px',
+            top: '18px',
+            right: '16px'
+        },
     }
 }));
