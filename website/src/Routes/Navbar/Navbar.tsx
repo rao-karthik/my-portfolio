@@ -143,13 +143,13 @@ const useStyles = makeStyles(theme=>({
         alignItems: 'center',
 
         '&:hover': {
-            borderBottom: '2px solid red'
+            borderBottom: '2px solid #58ba9d'
         }
     },
 
     activeTag: {
-        borderBottom: '2px solid red',
-        color: 'red'
+        borderBottom: '2px solid #58ba9d',
+        color: '#58ba9d'
     },
 
     tags: {

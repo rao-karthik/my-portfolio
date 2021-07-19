@@ -15,19 +15,29 @@ export default function Contact () {
             <Box className={classes.mainCont}>
 
                 <Box>
+                    
                     <Typography className={classes.heading} variant='h4'>Contact me at</Typography>
 
                     <Box className={classes.details}>
+
                         <Typography className={classes.contactDetails} style={{marginLeft: 0}}>
+
                             <PhoneIcon className={classes.icons} />
+
                             8607050509
+
                         </Typography>
 
                         <Typography className={classes.contactDetails}>
+
                             <AlternateEmailIcon className={classes.icons} />
+
                             kartikyadav94@gmail.com
+
                         </Typography>
+
                     </Box>
+                    
                 </Box>
                     
                 <ContactForm />
