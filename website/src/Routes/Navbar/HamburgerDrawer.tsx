@@ -5,6 +5,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import HomeIcon from '@material-ui/icons/Home';
 import CallIcon from '@material-ui/icons/Call';
 import PersonIcon from '@material-ui/icons/Person';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 import { Link } from 'react-router-dom';
 
 interface IHamburgerDrawerProps {
@@ -65,6 +66,18 @@ export const HamburgerNavbar = ({open, handleDrawerClose}: IHamburgerDrawerProps
                             <CallIcon className={classes.tagIcon} />
 
                             <Typography className={classes.drawerTags}>Contact</Typography>
+
+                        </Box>
+
+                    </Link>
+
+                    <Link to='/resume' style={{textDecoration: 'none'}}>
+
+                        <Box className={classes.tagCont} onClick={handleDrawerClose} >
+
+                            <AssignmentIcon className={classes.tagIcon} />
+
+                            <Typography className={classes.drawerTags}>Resume</Typography>
 
                         </Box>
 

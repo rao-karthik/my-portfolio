@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, makeStyles } from '@material-ui/core';
+import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components'
 import { ContactForm } from './ContactForm';
+import PhoneIcon from '@material-ui/icons/Phone';
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 
 export default function Contact () {
 
@@ -12,15 +14,23 @@ export default function Contact () {
 
             <Box className={classes.mainCont}>
 
-                <Box className={classes.leftCont}>
+                <Box>
+                    <Typography className={classes.heading} variant='h4'>Contact me at</Typography>
 
+                    <Box className={classes.details}>
+                        <Typography className={classes.contactDetails} style={{marginLeft: 0}}>
+                            <PhoneIcon className={classes.icons} />
+                            8607050509
+                        </Typography>
+
+                        <Typography className={classes.contactDetails}>
+                            <AlternateEmailIcon className={classes.icons} />
+                            kartikyadav94@gmail.com
+                        </Typography>
+                    </Box>
                 </Box>
-    
-                <Box className={classes.rightCont}>
                     
-                    <ContactForm />
-                    
-                </Box>
+                <ContactForm />
 
             </Box>
 
@@ -29,6 +39,7 @@ export default function Contact () {
 }
 
 const Container = styled.div`
+    position: relative;
     height: 100%;
     min-height: 100%;
     background: #222222;
@@ -42,18 +53,44 @@ const useStyles = makeStyles(theme=>({
         height: '800px',
         margin: 'auto',
         display: 'flex',
-        padding: theme.spacing(5, 0)
+        flexDirection: 'column',
+        padding: theme.spacing(10, 0),
+        alignItems: 'center',
+        justifyContent: 'center',
 
+        [theme.breakpoints.down(500)]: {
+            height: 650
+        }
     },
-    leftCont: {
-        width: '50%',
-        height: '100%',
-        borderRight: '1px solid #424242',
-        paddingRight: theme.spacing(5)
+
+    heading: {
+        textAlign: 'center'
     },
-    
-    rightCont: {
-        width: '50%',
-        paddingLeft: theme.spacing(5)
+
+    details: {
+        display: 'flex',
+        margin: theme.spacing(2),
+        
+        [theme.breakpoints.down(500)]: {
+            flexDirection: 'column',
+            alignItems: 'center'
+        }
+    },
+
+    contactDetails: {
+        fontSize: 20,
+        marginLeft: 40,
+
+        [theme.breakpoints.down(500)]: {
+            display: 'flex',
+            marginLeft: 0
+        }
+    },
+
+    icons: {
+        color: '#58ba9d',
+        marginRight: 10,
+        position: 'relative',
+        top: 5
     }
 }));
