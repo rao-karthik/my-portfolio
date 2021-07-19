@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import Footer from './Footer/Footer';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
+import Resume from '../Pages/Resume';
 
 export default function Routes () {
     return (
@@ -30,6 +31,12 @@ export default function Routes () {
                 <Route path='/contact' exact>
 
                     <Contact />
+
+                </Route>
+
+                <Route path='/resume' exact>
+
+                    <Resume />
 
                 </Route>
 

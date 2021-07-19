@@ -61,6 +61,12 @@ export default function Navbar () {
                                 
                             </NavLink>
 
+                            <NavLink to='/resume' className={classes.tagCont} exact activeClassName={classes.activeTag} >
+
+                                <Typography className={classes.tags}>Resume</Typography>
+                                
+                            </NavLink>
+
                     </Box>
             </AppBar>
             
