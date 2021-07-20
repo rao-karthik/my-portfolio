@@ -14,9 +14,13 @@ export default function Contact () {
 
             <Box className={classes.mainCont}>
 
-                <Box>
+                <Box className={classes.contactBox}>
+
+                    <Typography variant='h3' className={classes.contact}>Contact <span className={classes.me}>Me</span></Typography>
                     
-                    <Typography className={classes.heading} variant='h4'>Contact me at</Typography>
+                </Box>
+
+                <Box>
 
                     <Box className={classes.details}>
 
@@ -64,13 +68,33 @@ const useStyles = makeStyles(theme=>({
         margin: 'auto',
         display: 'flex',
         flexDirection: 'column',
-        padding: theme.spacing(10, 0),
+        paddingBottom: theme.spacing(10),
+        paddingTop: 40,
         alignItems: 'center',
         justifyContent: 'center',
 
         [theme.breakpoints.down(500)]: {
             height: 650
         }
+    },
+
+    contactBox: {
+        width: '100%',
+        borderBottom: '1px solid #424242',
+        marginBottom: 30,
+    },
+
+    contact: {
+        color: '#fff',
+        marginBottom: 20,
+
+        [theme.breakpoints.down(500)]: {
+            textAlign: 'left'
+        }
+    },
+
+    me: {
+        color: '#58ba9d'
     },
 
     heading: {

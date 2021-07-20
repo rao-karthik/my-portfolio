@@ -111,6 +111,7 @@ const useStyles = makeStyles(theme=>({
     },
 
     pcImageCont: {
+        minWidth: '400px',
         width: '600px',
         height: '400px',
         position: 'relative',
@@ -125,26 +126,17 @@ const useStyles = makeStyles(theme=>({
     },
 
     pcImage: {
+        // minWidth: '100%',
         width: '100%',
         height: '100%'
     },
 
     carouselBox: {
         position: 'absolute',
+        minWidth: '335px',
         width: '355px',
         height: '250px',
         top: '24px',
-        right: '20px',
-
-        [theme.breakpoints.down(1030)]: {
-            width: '290px',
-            right: '18px'
-        },
-
-        [theme.breakpoints.down(1025)]: {
-            width: '288px',
-            top: '18px',
-            right: '16px'
-        },
+        right: '22px',
     }
 }));
