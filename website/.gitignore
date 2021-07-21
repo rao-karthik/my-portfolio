@@ -22,7 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+.env
+
 .netlify
 .firebase
-.firebase.json
+firebase.json
 .firebaserc
