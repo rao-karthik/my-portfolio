@@ -1,50 +1,59 @@
 import React from 'react';
 import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components'
-import { ContactForm } from './ContactForm';
 import PhoneIcon from '@material-ui/icons/Phone';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import { useForm } from '@formspree/react';
+
+import { ContactForm } from './ContactForm';
 
 export default function Contact () {
 
     const classes = useStyles();
+
+    const [state, handleSubmit] = useForm("mjvjeqje");
     
     return (
         <Container>
 
+            <Box className={classes.contactBox}>
+
+                <Typography variant='h3' className={classes.contact}>Contact <span className={classes.me}>Me</span></Typography>
+                
+            </Box>
+
             <Box className={classes.mainCont}>
 
-                <Box className={classes.contactBox}>
-
-                    <Typography variant='h3' className={classes.contact}>Contact <span className={classes.me}>Me</span></Typography>
-                    
-                </Box>
 
                 <Box>
 
-                    <Box className={classes.details}>
+                    {
+                        !state.succeeded &&
 
-                        <Typography className={classes.contactDetails} style={{marginLeft: 0}}>
+                        <Box className={classes.details}>
 
-                            <PhoneIcon className={classes.icons} />
+                            <Typography className={classes.contactDetails} style={{marginLeft: 0}}>
 
-                            8607050509
+                                <PhoneIcon className={classes.icons} />
 
-                        </Typography>
+                                8607050509
 
-                        <Typography className={classes.contactDetails}>
+                            </Typography>
 
-                            <AlternateEmailIcon className={classes.icons} />
+                            <Typography className={classes.contactDetails}>
 
-                            kartikyadav94@gmail.com
+                                <AlternateEmailIcon className={classes.icons} />
 
-                        </Typography>
+                                contact@kartikyadav.in
 
-                    </Box>
+                            </Typography>
+
+                        </Box>
+                    }
                     
                 </Box>
                     
-                <ContactForm />
+                <ContactForm state={state} handleSubmit={handleSubmit} />
 
             </Box>
 
@@ -64,7 +73,7 @@ const Container = styled.div`
 const useStyles = makeStyles(theme=>({
     mainCont: {
         width: '70%',
-        height: '800px',
+        height: '650px',
         margin: 'auto',
         display: 'flex',
         flexDirection: 'column',
@@ -79,9 +88,12 @@ const useStyles = makeStyles(theme=>({
     },
 
     contactBox: {
-        width: '100%',
+        width: '70%',
+        height: '120px',
         borderBottom: '1px solid #424242',
         marginBottom: 30,
+        margin: 'auto',
+        paddingTop: 40
     },
 
     contact: {

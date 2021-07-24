@@ -20,6 +20,12 @@ const config: IConfig = {
     measurementId: process.env.REACT_APP__MEASUREMENT_ID
 };
 
-firebase.initializeApp(config);
+const app = firebase.initializeApp(config);
+const db = firebase.firestore();
+const storage = firebase.storage();
 
-export default firebase;
+export {
+    app,
+    db,
+    storage
+};

@@ -1,69 +1,46 @@
 import React from 'react';
 import styled from 'styled-components';
-import db from '../../NetworkReq/netReq';
+import { ValidationError } from '@formspree/react';
 
-interface IFormData {
-    name: string;
-    email: string;
+interface IContactFormProps {
+    state: any;
+    handleSubmit: any;
 }
 
-const initData: IFormData = {
-    name: '',
-    email: '',
-}
+export const ContactForm = ({state, handleSubmit}: IContactFormProps) => {
 
-export const ContactForm = () => {
-
-    const [ req, setReq ] = React.useState<IFormData>(initData);
-
-    const [ message, setMessage ] = React.useState<string>('');
-
-    const [ forms, setForms ] = React.useState<any>([])
-
-    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-        const { name, value } = e.target;
-
-        const payload = {
-            ...req,
-            [name]: name === 'email'? value.toLowerCase() : value
-        };
-
-        setReq(payload);
-    }
-
-    const handleMessageChange: React.ChangeEventHandler<HTMLTextAreaElement> = (e) => {
-        const value = e.target.value;
-        setMessage(value);
-    }
-
-    const fetchData = async () => {
-        const data = await db.collection('contactForms').get();
-                    
-    }
-
-    const handlePostForm: React.FormEventHandler<HTMLFormElement> = async (e)=>{
-        e.preventDefault();
-        // const data = {
-        //     ...req,
-        //     message
-        // }
-        const data = await db.collection("contactForms").get();
-
-        console.log(data)
+    if (state.succeeded) {
+        return <p style={{fontSize: '25px'}}>Your message has been sent. Thank You for contacting.</p>;
     }
     
     return (
         <Container>
 
-            <Heading>or</Heading>
+            <Form onSubmit={handleSubmit}>
 
-            <Form>
+                <Input type="text" name="name" id="name" placeholder="Name" />
 
-                <Input type="text" name="name" placeholder="Name" onChange={handleChange} />
+                <ValidationError 
+                    prefix="Name" 
+                    field="name"
+                    errors={state.errors}
+                /> 
 
-                <Input type="text" name="email" placeholder="Email" onChange={handleChange} />
+                <Input type="text" name="email" id="email" placeholder="Email" />
 
-                <Textarea name="" id=""  placeholder="Enter Message" onChange={handleMessageChange} ></Textarea>   
+                <ValidationError 
+                    prefix="Email" 
+                    field="email"
+                    errors={state.errors}
+                /> 
+
+                <Textarea name="message" id="message"  placeholder="Enter Message" ></Textarea>  
+
+                <ValidationError 
+                    prefix="Message" 
+                    field="message"
+                    errors={state.errors}
+                /> 
 
                 <Btn>Submit</Btn>      
 
@@ -79,11 +56,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`;
-
-const Heading = styled.p`
-    margin-bottom: 10px;
-    font-size: 30px;
 `;
 
 const Form = styled.form`
@@ -124,4 +96,5 @@ const Btn = styled.button`
     width: 200px;
     border-radius: 5px;
     margin: 10px auto;
+    cursor: pointer;
 `;

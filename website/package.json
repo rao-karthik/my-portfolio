@@ -1,8 +1,10 @@
 {
   "name": "my-portfolio",
+  "homepage": "https://rao-kartik.github.io/my-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@formspree/react": "^2.2.3",
     "@material-ui/core": "^4.12.1",
     "@material-ui/icons": "^4.11.2",
     "@reduxjs/toolkit": "^1.6.1",
@@ -31,7 +33,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -53,7 +57,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.8",
-    "@types/styled-components": "^5.1.11"
-  },
-  "homepage": "."
+    "@types/styled-components": "^5.1.11",
+    "gh-pages": "^3.2.3"
+  }
 }
