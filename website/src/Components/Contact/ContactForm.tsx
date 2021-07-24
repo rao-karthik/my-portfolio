@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { ValidationError } from '@formspree/react';
 
@@ -7,7 +7,35 @@ interface IContactFormProps {
     handleSubmit: any;
 }
 
+interface IInput {
+    name: string,
+    email: string
+}
+
+const initData: IInput = {
+    name: '',
+    email: ''
+}
+
 export const ContactForm = ({state, handleSubmit}: IContactFormProps) => {
+
+    const [ input, setInput ] = useState<IInput>(initData);
+
+    const [ msgInp, setMsgInp ] = useState<string>('');
+
+    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e)=>{
+        const { name, value } = e.target;
+        const payload = {
+            ...input,
+            [name]: value
+        }
+        setInput(payload);
+    }
+
+    const handleMessageChange: React.ChangeEventHandler<HTMLTextAreaElement> = (e)=>{
+        const value = e.target.value;
+        setMsgInp(value);
+    }
 
     if (state.succeeded) {
         return <p style={{fontSize: '25px'}}>Your message has been sent. Thank You for contacting.</p>;
@@ -18,7 +46,7 @@ export const ContactForm = ({state, handleSubmit}: IContactFormProps) => {
 
             <Form onSubmit={handleSubmit}>
 
-                <Input type="text" name="name" id="name" placeholder="Name" />
+                <Input type="text" name="name" id="name" placeholder="Name" onChange={handleChange} />
 
                 <ValidationError 
                     prefix="Name" 
@@ -26,7 +54,7 @@ export const ContactForm = ({state, handleSubmit}: IContactFormProps) => {
                     errors={state.errors}
                 /> 
 
-                <Input type="text" name="email" id="email" placeholder="Email" />
+                <Input type="text" name="email" id="email" placeholder="Email" onChange={handleChange} />
 
                 <ValidationError 
                     prefix="Email" 
@@ -34,7 +62,7 @@ export const ContactForm = ({state, handleSubmit}: IContactFormProps) => {
                     errors={state.errors}
                 /> 
 
-                <Textarea name="message" id="message"  placeholder="Enter Message" ></Textarea>  
+                <Textarea name="message" id="message"  placeholder="Enter Message" onChange={handleMessageChange} ></Textarea>  
 
                 <ValidationError 
                     prefix="Message" 
@@ -42,7 +70,11 @@ export const ContactForm = ({state, handleSubmit}: IContactFormProps) => {
                     errors={state.errors}
                 /> 
 
-                <Btn>Submit</Btn>      
+                <Btn disabled={input.name.length === 0 ||
+                                input.email.length === 0 || 
+                                msgInp.length === 0}>
+                    Submit
+                </Btn>      
 
             </Form>
 
