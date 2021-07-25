@@ -66,10 +66,14 @@ const Container = styled.div`
     margin: 20px;
 `;
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme=>({
     root: {
       maxWidth: 330,
       paddingTop: 5,
+
+      [theme.breakpoints.down(500)]:{
+          width: 300
+      }
     },
 
     media: {
@@ -99,4 +103,4 @@ const useStyles = makeStyles({
     githubText: {
         marginLeft: 10
     }
-  });
+  }));

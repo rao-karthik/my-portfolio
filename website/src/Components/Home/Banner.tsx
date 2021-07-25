@@ -85,8 +85,9 @@ const useStyles = makeStyles(theme=>({
 
     name: {
         color: '#58ba9d',
-        fontSize: '70px',
+        fontSize: 90,
         fontWeight: 600,
+        fontFamily: 'Tangerine, cursive',
 
         [theme.breakpoints.down(550)]: {
             lineHeight: '72px',
@@ -97,13 +98,16 @@ const useStyles = makeStyles(theme=>({
             marginTop: '-80px'
         },
 
-        [theme.breakpoints.down(1030)]: {
+        [theme.breakpoints.down(1140)]: {
             lineHeight: '72px',
+            fontSize: 80
         },
     },
 
     headText: {
         color: '#a9a9a9',
+        fontSize: 40,
+        fontFamily: 'Tangerine, cursive',
 
         [theme.breakpoints.down(550)]: {
             textAlign: 'center'

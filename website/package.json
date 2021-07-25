@@ -1,6 +1,5 @@
 {
   "name": "my-portfolio",
-  "homepage": "https://rao-kartik.github.io/my-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -59,5 +58,6 @@
     "@types/react-router-dom": "^5.1.8",
     "@types/styled-components": "^5.1.11",
     "gh-pages": "^3.2.3"
-  }
+  },
+  "homepage": "."
 }

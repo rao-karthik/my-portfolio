@@ -44,7 +44,7 @@ export const Projects = () => {
             
             <Box className={classes.headingCont}>
 
-                <Typography variant='h3' >Projects</Typography>
+                <Typography variant='h3' className={classes.heading} >Projects</Typography>
 
             </Box>
 
@@ -71,11 +71,20 @@ const useStyles = makeStyles(theme=>({
         width: '70%',
         margin: 'auto',
         textAlign: 'center',
-        padding: theme.spacing(10),
+        padding: theme.spacing(4, 0, 2),
 
         [theme.breakpoints.down(500)]: {
-            width: '90%',
-            padding: theme.spacing(10, 0, 7)
+            width: '100%',
+            padding: theme.spacing(4, 0, 1)
+        }
+    },
+
+    heading: {
+        fontFamily: 'Tangerine, cursive',
+        fontSize: 80,
+
+        [theme.breakpoints.down(500)]: {
+            fontSize: 50,
         }
     },
 
@@ -90,7 +99,8 @@ const useStyles = makeStyles(theme=>({
         borderBottom: '1px solid #424242',
 
         [theme.breakpoints.down(500)]: {
-            width: '90%'
+            width: '100%',
+            paddingBottom: theme.spacing(5),
         },
 
         [theme.breakpoints.down(1025)]: {

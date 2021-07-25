@@ -382,7 +382,7 @@ const useStyles = makeStyles(theme=>({
         width: '70%',
         margin: 'auto',
         textAlign: 'center',
-        padding: theme.spacing(10, 1),
+        padding: theme.spacing(4, 0, 0),
 
         [theme.breakpoints.down(500)]: {
             width: '90%',
@@ -390,7 +390,13 @@ const useStyles = makeStyles(theme=>({
     },
 
     head: {
-        textAlign: 'center'
+        textAlign: 'center',
+        fontFamily: 'Tangerine, cursive',
+        fontSize: 80,
+
+        [theme.breakpoints.down(500)]: {
+            fontSize: 50
+        }
     },
 
     techs: {
@@ -398,6 +404,7 @@ const useStyles = makeStyles(theme=>({
         margin: 'auto',
         display: 'flex',
         paddingBottom: theme.spacing(10),
+        marginTop: -8,
 
         [theme.breakpoints.down(1300)]: {
             width: '55%'
@@ -422,12 +429,12 @@ const useStyles = makeStyles(theme=>({
     techIcons: {
         width: 100,
         height: 100,
-        marginTop: 10,
+        marginTop: 30,
     },
 
     iconName: {
         color: '#bdbdbd',
         textAlign: 'center',
-        fontSize: '14px'
+        fontSize: 13,
     }
 }));
