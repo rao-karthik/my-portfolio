@@ -2,6 +2,16 @@ import React from 'react';
 import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import { SingleProjectComp } from './SingleProjectComp';
+import JavascriptLogo from '../../Logos/JavascriptLogo';
+import HtmlLogo from '../../Logos/HtmlLogo';
+import ReactLogo from '../../Logos/ReactLogo';
+import CssLogo from '../../Logos/CssLogo';
+import ReduxLogo from '../../Logos/ReduxLogo';
+import FirebaseLogo from '../../Logos/FirebaseLogo';
+import MaterialUiLogo from '../../Logos/MaterialUiLogo';
+import ExpressLogo from '../../Logos/ExpressLogo';
+import MongoDbLogo from '../../Logos/MongoDbLogo';
+import AwsLogo from '../../Logos/AwsLogo';
 
 export interface IProjectList {
     title: string;
@@ -11,16 +21,23 @@ export interface IProjectList {
     githubLink: string;
     website: string;
     flexDirection?: string | any;
+    techUsed: any[]
 }
 
 const projectList: IProjectList[] = [
     {
-        title: 'Linked Learning Clone',
+        title: 'LinkedIn Learning Clone',
         imageTitle: 'Linked Learning',
         imageUrl: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2Fgif's%2FLinkedIn%20Learning.gif?alt=media&token=0259f0e6-98df-41a0-9101-7c383fa899c2",
         description: 'LinkedIn Learning is an e-Learning Platform. Here I have done the homePage, signIn and signUp functionality.',
         website: "https://linked-learning-project.web.app/",
-        githubLink: 'https://github.com/ashish8796/linkedin-learning-clone'
+        githubLink: 'https://github.com/ashish8796/linkedin-learning-clone',
+        techUsed: [ <ReactLogo boxWidth='50px' boxHeight='50px' />, 
+                    <ReduxLogo boxWidth='50px' boxHeight='50px' />,
+                    <MaterialUiLogo boxWidth='50px' boxHeight='50px' />,
+                    <ExpressLogo width='50px' height='50px' fontSize='7px' jsFontSize='9px' />,
+                    <MongoDbLogo boxWidth='50px' boxHeight='50px' />,
+                    <AwsLogo boxWidth='50px' boxHeight='50px' /> ]
     },
     {
         title: 'Indeed Clone',
@@ -29,7 +46,11 @@ const projectList: IProjectList[] = [
         description: 'Indeed is a job where users can search for jobs. Here I have done the homePage, signIn and signUp functionality.',
         githubLink: 'https://github.com/Rskamra002/Indeed-Clone',
         website: "https://teamberyllium-indeedclone.web.app/",
-        flexDirection: 'row-reverse'
+        flexDirection: 'row-reverse',
+        techUsed: [ <ReactLogo boxWidth='50px' boxHeight='50px' />, 
+                    <ReduxLogo boxWidth='50px' boxHeight='50px' />,
+                    <FirebaseLogo boxWidth='50px' boxHeight='50px' />,
+                    <MaterialUiLogo boxWidth='50px' boxHeight='50px' /> ]
     },
     {
         title: 'Himalaya Clone',
@@ -37,7 +58,10 @@ const projectList: IProjectList[] = [
         imageUrl: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2Fgif's%2FHimalaya.gif?alt=media&token=6590e19d-327e-497a-a617-92c373d3a19c",
         description: 'Himalaya is a herbal product e-commerce website. Here I have done the homePage, signIn and signUp functionality.',
         githubLink: 'https://github.com/rao-kartik/himalaya-clone',
-        website: "https://rao-kartik.github.io/himalaya-clone/"
+        website: "https://rao-kartik.github.io/himalaya-clone/",
+        techUsed: [ <JavascriptLogo width='50px' height='50px' variant='h5' />, 
+                    <HtmlLogo boxWidth='50px' boxHeight='50px' svgWidth='80%' />,
+                    <CssLogo boxWidth='50px' boxHeight='50px' svgWidth='80%' /> ]
     },
     {
         title: 'Chargebee Clone',
@@ -46,7 +70,10 @@ const projectList: IProjectList[] = [
         description: 'Himalaya is a herbal product e-commerce website. Here I have done the homePage, signIn and signUp functionality.',
         githubLink: 'https://github.com/rao-kartik/himalaya-clone',
         website: "https://rao-kartik.github.io/chargeebee-clone/",
-        flexDirection: 'row-reverse'
+        flexDirection: 'row-reverse',
+        techUsed: [ <JavascriptLogo width='50px' height='50px' variant='h5' />, 
+                    <HtmlLogo boxWidth='50px' boxHeight='50px' svgWidth='80%' />, 
+                    <CssLogo boxWidth='50px' boxHeight='50px' svgWidth='80%' /> ]
     },
 ]
 
@@ -95,9 +122,6 @@ const useStyles = makeStyles(theme=>({
     },
 
     heading: {
-        fontFamily: 'Tangerine, cursive',
-        fontSize: 80,
-
         [theme.breakpoints.down(500)]: {
             fontSize: 50,
         }
@@ -106,7 +130,7 @@ const useStyles = makeStyles(theme=>({
     projects: {
         width: '70%',
         margin: 'auto',
-        paddingBottom: theme.spacing(10),
+        paddingBottom: theme.spacing(4),
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
