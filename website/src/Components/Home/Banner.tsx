@@ -106,8 +106,7 @@ const useStyles = makeStyles(theme=>({
 
     headText: {
         color: '#a9a9a9',
-        fontSize: 40,
-        fontFamily: 'Tangerine, cursive',
+        fontSize: 20,
 
         [theme.breakpoints.down(550)]: {
             textAlign: 'center'

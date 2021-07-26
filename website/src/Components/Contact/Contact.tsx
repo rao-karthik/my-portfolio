@@ -99,8 +99,6 @@ const useStyles = makeStyles(theme=>({
     contact: {
         color: '#fff',
         marginBottom: 20,
-        fontFamily: 'Tangerine, cursive',
-        fontSize: 60,
 
         [theme.breakpoints.down(500)]: {
             textAlign: 'left'

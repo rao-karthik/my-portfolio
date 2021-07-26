@@ -153,7 +153,6 @@ const useStyles = makeStyles(theme=>({
     },
 
     tags: {
-        fontSize: '30px',
-        fontFamily: 'Tangerine, cursive',
+        fontSize: '20px',
     }
 }));

@@ -9,29 +9,44 @@ export interface IProjectList {
     imageUrl: string;
     description: string;
     githubLink: string;
+    website: string;
+    flexDirection?: string | any;
 }
 
 const projectList: IProjectList[] = [
     {
         title: 'Linked Learning Clone',
         imageTitle: 'Linked Learning',
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2FLinkedIn.png?alt=media&token=41b96f1c-82af-42a4-b198-468ef06e4113",
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2Fgif's%2FLinkedIn%20Learning.gif?alt=media&token=0259f0e6-98df-41a0-9101-7c383fa899c2",
         description: 'LinkedIn Learning is an e-Learning Platform. Here I have done the homePage, signIn and signUp functionality.',
+        website: "https://linked-learning-project.web.app/",
         githubLink: 'https://github.com/ashish8796/linkedin-learning-clone'
     },
     {
         title: 'Indeed Clone',
         imageTitle: 'Indeed',
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2FIndeed.png?alt=media&token=c67e42e7-6426-4dad-a843-0d1d3e9e1af8",
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2Fgif's%2FIndeed%20GIF.gif?alt=media&token=747f1411-38b1-4cbc-8427-ee81daa0b95d",
         description: 'Indeed is a job where users can search for jobs. Here I have done the homePage, signIn and signUp functionality.',
-        githubLink: 'https://github.com/Rskamra002/Indeed-Clone'
+        githubLink: 'https://github.com/Rskamra002/Indeed-Clone',
+        website: "https://teamberyllium-indeedclone.web.app/",
+        flexDirection: 'row-reverse'
     },
     {
         title: 'Himalaya Clone',
         imageTitle: 'Himalaya',
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2FHimalaya.png?alt=media&token=e7ff9b20-6736-4498-94c3-66a755f9d5b2",
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2Fgif's%2FHimalaya.gif?alt=media&token=6590e19d-327e-497a-a617-92c373d3a19c",
         description: 'Himalaya is a herbal product e-commerce website. Here I have done the homePage, signIn and signUp functionality.',
-        githubLink: 'https://github.com/rao-kartik/himalaya-clone'
+        githubLink: 'https://github.com/rao-kartik/himalaya-clone',
+        website: "https://rao-kartik.github.io/himalaya-clone/"
+    },
+    {
+        title: 'Chargebee Clone',
+        imageTitle: 'Himalaya',
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2Fgif's%2FChargeebee.gif?alt=media&token=4716b057-0d7d-41f6-9c7f-8689500bf59a",
+        description: 'Himalaya is a herbal product e-commerce website. Here I have done the homePage, signIn and signUp functionality.',
+        githubLink: 'https://github.com/rao-kartik/himalaya-clone',
+        website: "https://rao-kartik.github.io/chargeebee-clone/",
+        flexDirection: 'row-reverse'
     },
 ]
 
