@@ -112,7 +112,7 @@ const useStyles = makeStyles(theme=>({
     },
 
     mediaBox: {
-        width: '64%',
+        width: '60%',
         padding: 15,
         border: '2px solid #fff',
         borderRadius: 25,
@@ -151,7 +151,7 @@ const useStyles = makeStyles(theme=>({
         flexDirection: 'column',
         alignItems: 'center',
         // justifyContent: 'center',
-        width: '33%',
+        width: '38%',
 
         [theme.breakpoints.down(1390)]: {
             width: '100%'

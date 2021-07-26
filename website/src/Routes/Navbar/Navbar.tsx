@@ -57,7 +57,7 @@ export default function Navbar () {
 
                             <NavLink to='/contact' className={classes.tagCont} exact activeClassName={classes.activeTag} >
 
-                                <Typography className={classes.tags}>Contact me</Typography>
+                                <Typography className={classes.tags}>Contact</Typography>
                                 
                             </NavLink>
 

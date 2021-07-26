@@ -17,7 +17,13 @@ export const ImageCarousel = () => {
             image: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2FIndeed.png?alt=media&token=c67e42e7-6426-4dad-a843-0d1d3e9e1af8"
         },
         {
+            image: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2Frailyatri.png?alt=media&token=87fad87d-05d7-4141-9f84-2351c0afbd33"
+        },
+        {
             image: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2FHimalaya.png?alt=media&token=e7ff9b20-6736-4498-94c3-66a755f9d5b2"
+        },
+        {
+            image: "https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Projects%2FChargebee.png?alt=media&token=2a060ee6-bb86-4ea0-a08f-6d806a81f3a4"
         }
     ]
 
