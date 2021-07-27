@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AppBar, Box, makeStyles, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -7,12 +7,16 @@ import clsx from 'clsx';
 import { HamburgerNavbar } from './HamburgerDrawer';
 
 import { Link, NavLink } from 'react-router-dom';
+import { ScrollContext } from '../../Context/ScrollContextProvider';
+import whiteLogo from '../../Assets/whiteLogo.png'
 
 export default function Navbar () {
 
     const classes = useStyles();
     
     const [ open, setOpen ] = React.useState(false);
+
+    let { scrollToProject, scrollToSkills }: any = useContext(ScrollContext);
 
     const handleDrawerOpen: React.MouseEventHandler<SVGSVGElement> = () => {
         setOpen(true);
@@ -41,7 +45,7 @@ export default function Navbar () {
                             
                                 <Box className={classes.imageBox}>
                                     
-                                    <img className={classes.image} src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Logo%2FwhiteLogo.png?alt=media&token=faa28b65-bac4-4a80-9f48-cfeba46a9db3" alt='Kartik' />
+                                    <img className={classes.image} src={whiteLogo} alt='Kartik' />
 
                                 </Box>
                             
@@ -89,7 +93,7 @@ const drawerWidth = 260;
 
 const useStyles = makeStyles(theme=>({
     appBar: {
-        background: '#121212',
+        background: '#000',
         height: '70px',
         position: 'relative',
         display: 'flex',
@@ -98,6 +102,7 @@ const useStyles = makeStyles(theme=>({
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
+        borderBottom: '1px solid #424242'
     },
 
     appBarShift: {
@@ -113,6 +118,7 @@ const useStyles = makeStyles(theme=>({
         cursor: 'pointer',
         fontSize: '36px',
         marginLeft: '30px',
+        position: 'fixed',
 
         [theme.breakpoints.up(960)]: {
             display: 'none'

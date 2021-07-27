@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
@@ -14,6 +14,7 @@ import ExpressLogo from '../../Logos/ExpressLogo';
 import MongoDbLogo from '../../Logos/MongoDbLogo';
 import AwsLogo from '../../Logos/AwsLogo';
 import TypescriptLogo from '../../Logos/TypescriptLogo';
+import { IScrollContext, ScrollContext } from '../../Context/ScrollContextProvider';
 
 export interface IProjectList {
     title: string;
@@ -57,7 +58,7 @@ const projectList: IProjectList[] = [
 
         description: 'It is an online job portal where a job-seeker can search for jobs depending upon the category or location or both. There is an admin portal where admin have access to all jobs and recruiter. The admin can add or delete any job or recruiter.',
 
-        githubLink: 'https://github.com/Rskamra002/Indeed-Clone',
+        githubLink: 'https://github.com/rao-kartik/Indeed-Clone',
 
         website: "https://teamberyllium-indeedclone.web.app/",
 
@@ -126,12 +127,15 @@ const projectList: IProjectList[] = [
     },
 ]
 
+
 export const Projects = () => {
 
     const classes = useStyles();
 
+    const { projectRef } = useContext<IScrollContext | any>(ScrollContext);
+
     return (
-        <Container>
+        <Container ref={projectRef}>
             
             <Box className={classes.headingCont}>
 
@@ -155,6 +159,7 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
+    padding: 70px 0 0;
 `;
 
 const useStyles = makeStyles(theme=>({

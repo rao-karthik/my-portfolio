@@ -3,6 +3,7 @@ import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
 import { ImageCarousel } from './ImageCarousel';
+import pcImage from '../../Assets/pc.webp';
 
 export const Banner = () => {
 
@@ -25,7 +26,7 @@ export const Banner = () => {
 
                 <Box className={classes.pcImageCont}>
 
-                    <img className={classes.pcImage} src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Pictures%2Fpc.webp?alt=media&token=18132b6b-310e-4981-804e-8b09c9e7c936" alt='' />
+                    <img className={classes.pcImage} src={pcImage} alt='' />
 
                     <Box className={classes.carouselBox}>
 
@@ -103,7 +104,6 @@ const useStyles = makeStyles(theme=>({
         color: '#58ba9d',
         fontSize: 90,
         fontWeight: 600,
-        fontFamily: 'Tangerine, cursive',
 
         [theme.breakpoints.down(1140)]: {
             lineHeight: '72px',

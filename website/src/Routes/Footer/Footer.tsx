@@ -27,7 +27,7 @@ const Container = styled.div`
     position: relative;
     width: 100%;
     height: 70px;
-    background: #222222;
+    background: #000;
 `;
 
 const useStyles = makeStyles(theme=>({

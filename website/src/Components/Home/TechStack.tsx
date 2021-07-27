@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import TypescriptLogo from '../../Logos/TypescriptLogo';
@@ -13,17 +13,20 @@ import CssLogo from '../../Logos/CssLogo';
 import ReduxLogo from '../../Logos/ReduxLogo';
 import ExpressLogo from '../../Logos/ExpressLogo';
 import FirebaseLogo from '../../Logos/FirebaseLogo';
+import { IScrollContext, ScrollContext } from '../../Context/ScrollContextProvider';
 
 export const TechStack = () => {
 
     const classes = useStyles();
+
+    const { skillsRef } = useContext<IScrollContext | any>(ScrollContext);
     
     return (
-        <Container>
+        <Container ref={skillsRef}>
 
             <Box className={classes.headingCont}>
 
-                <Typography className={classes.head} variant='h3' >Tech Stack and Proficiencies</Typography>
+                <Typography className={classes.head} variant='h3' >Skills</Typography>
 
             </Box>
 
@@ -184,6 +187,7 @@ export const TechStack = () => {
 
 const Container = styled.div`
     width: 100%;
+    margin: 70px 0 0;
 `;
 
 const useStyles = makeStyles(theme=>({

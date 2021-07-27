@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
+import blackLogo from '../../Assets/blackLogo.png'
+
 interface IHamburgerDrawerProps {
     open: boolean;
     handleDrawerClose: any;
@@ -40,7 +42,7 @@ export const HamburgerNavbar = ({open, handleDrawerClose}: IHamburgerDrawerProps
 
                         <Box className={classes.logoCont}>
 
-                            <img className={classes.logo} src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Logo%2FblackLogo.png?alt=media&token=b16700a3-4011-416d-9bc2-e791a717c010" alt="k" />
+                            <img className={classes.logo} src={blackLogo} alt="k" />
 
                         </Box>
 

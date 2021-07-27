@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { ValidationError } from '@formspree/react';
+import styles from './Contact.module.css';
 
 interface IContactFormProps {
     state: any;
@@ -52,6 +53,7 @@ export const ContactForm = ({state, handleSubmit}: IContactFormProps) => {
                     prefix="Name" 
                     field="name"
                     errors={state.errors}
+                    className={styles.warning}
                 /> 
 
                 <Input type="text" name="email" id="email" placeholder="Email" onChange={handleChange} />
@@ -60,6 +62,7 @@ export const ContactForm = ({state, handleSubmit}: IContactFormProps) => {
                     prefix="Email" 
                     field="email"
                     errors={state.errors}
+                    className={styles.warning}
                 /> 
 
                 <Textarea name="message" id="message"  placeholder="Enter Message" onChange={handleMessageChange} ></Textarea>  
@@ -68,6 +71,7 @@ export const ContactForm = ({state, handleSubmit}: IContactFormProps) => {
                     prefix="Message" 
                     field="message"
                     errors={state.errors}
+                    className={styles.warning}
                 /> 
 
                 <Btn disabled={input.name.length === 0 ||
@@ -120,6 +124,8 @@ const Textarea = styled.textarea`
     padding: 10px 20px;
     font-size: 16px;
     resize: none;
+    outline: none;
+    border: none;
 `;
 
 const Btn = styled.button`

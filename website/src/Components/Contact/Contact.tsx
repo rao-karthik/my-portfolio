@@ -111,7 +111,7 @@ const Container = styled.div`
     position: relative;
     height: 100%;
     min-height: 100%;
-    background: #222222;
+    background: #000;
     position: relative;
     color: #fff;
     padding: 60px 0 0;

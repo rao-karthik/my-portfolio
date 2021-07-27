@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
+import profilePic from '../../Assets/profilePic.jpg';
+
 export default function About () {
 
     const classes = useStyles();
@@ -11,7 +13,7 @@ export default function About () {
             
             <Box className={classes.mainCont}>
 
-                <Typography variant='h3' className={classes.about}>About <span className={classes.me}>Me</span></Typography>
+                <Typography variant='h3' className={classes.about}>WHO IS<span className={classes.me}> THIS</span> MAN?</Typography>
 
                 <Box className={classes.quoteBox}>
 
@@ -23,19 +25,35 @@ export default function About () {
 
                     <Box className={classes.imageBox}>
 
-                        <img className={classes.image} src='https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Resume%2FprofilePic.jpeg?alt=media&token=47535a8f-3c4a-4aff-b9c1-be66afc3e553' alt='' />
+                        <img className={classes.image} src={profilePic} alt='' />
 
                     </Box>
 
                     <Box className={classes.description}>
 
-                        <Typography variant='h1' className={classes.iam}><span className={classes.i}>I</span> am</Typography>
+                        <Typography variant='h4' className={classes.iam}>
+                            
+                            I am
 
-                        <Typography variant='h4' className={classes.iam}> A FULL STACK WEB-DEVELOPER</Typography>
+                            <span className={classes.i}> A FULL STACK WEB-DEVELOPER</span>
+                            
+                        </Typography>
 
                         <Typography className={classes.content}>
 
-                            always eager to engage in new and exciting projects and if you want to build something together, get in touch.
+                            I have passion of creating good apps for good people.
+
+                        </Typography>
+
+                        <Typography className={classes.content}>
+
+                            One of my hobby is to explore new techs.
+
+                        </Typography>
+
+                        <Typography className={classes.content}>
+
+                            I am always eager to engage in new and exciting projects and if you want to build something together, get in touch.
 
                         </Typography>
 
@@ -53,7 +71,7 @@ const Container = styled.div`,
     width: 100%;
     height: 100%;
     height: 93vh;
-    background: #222222;
+    background: #000;
     padding: 60px 0 0;
 
     @media (max-width: 800px) {
@@ -133,9 +151,12 @@ const useStyles = makeStyles(theme=>({
     iam: {
         color: '#fff',
         paddingLeft: 20,
+        lineHeight: 2,
 
         [theme.breakpoints.down(500)]: {
-            fontSize: 30
+            fontSize: 30,
+            lineHeight: 1,
+            marginBottom: 20
         },
 
         [theme.breakpoints.down(800)]: {
@@ -159,7 +180,7 @@ const useStyles = makeStyles(theme=>({
         width: 500,
         paddingLeft: 20,
         lineHeight: 1.5,
-        marginBottom: 30,
+        marginBottom: 10,
 
         [theme.breakpoints.down(550)]: {
             width: 300,
