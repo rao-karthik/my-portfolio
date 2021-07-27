@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Router, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 import Navbar from './Navbar/Navbar';
 import Home from '../Pages/Home';
@@ -8,41 +9,51 @@ import Footer from './Footer/Footer';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
 import Resume from '../Pages/Resume';
+import ScrollToTop from './ScrollToTop';
 
 export default function Routes () {
+
+    const history = createBrowserHistory();
+
     return (
         <Container>
-            <Navbar />
+            <Router history={history}>
 
-            <Switch>
+                <ScrollToTop />
                 
-                <Route path='/' exact>
+                <Navbar />
 
-                    <Home />
+                <Switch>
+                    
+                    <Route path='/' exact>
 
-                </Route>
+                        <Home />
 
-                <Route path='/about' exact>
+                    </Route>
 
-                    <About />
+                    <Route path='/about' exact>
 
-                </Route>
+                        <About />
 
-                <Route path='/contact' exact>
+                    </Route>
 
-                    <Contact />
+                    <Route path='/contact' exact>
 
-                </Route>
+                        <Contact />
 
-                <Route path='/resume' exact>
+                    </Route>
 
-                    <Resume />
+                    <Route path='/resume' exact>
 
-                </Route>
+                        <Resume />
 
-            </Switch>
+                    </Route>
 
-            <Footer />
+                </Switch>
+
+                <Footer />
+
+            </Router>
 
         </Container>
     )
