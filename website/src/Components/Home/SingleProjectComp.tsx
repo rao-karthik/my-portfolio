@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Card, CardActionArea, CardActions, CardContent, CardMedia, makeStyles, Typography } from '@material-ui/core';
+import { Box, CardActionArea, CardActions, CardMedia, makeStyles, Typography } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LanguageIcon from '@material-ui/icons/Language';
+import { v4 as uuid} from 'uuid';
 
 import { IProjectList } from './Projects';
 import { Link } from 'react-router-dom';
@@ -14,7 +15,7 @@ export const SingleProjectComp = ({title, imageTitle, imageUrl, description, web
     return (
         <Container>
 
-            <Card className={classes.root} style={{flexDirection: flexDirection}}>
+            <Box className={classes.root} style={{flexDirection: flexDirection}}>
 
                 <CardActionArea className={classes.mediaBox}>
 
@@ -28,7 +29,7 @@ export const SingleProjectComp = ({title, imageTitle, imageUrl, description, web
 
                 <CardActions className={classes.githubCont}>
 
-                    <CardContent>
+                    <Box>
 
                         <Typography gutterBottom variant="h4" component="h2" className={classes.head}>
 
@@ -42,7 +43,7 @@ export const SingleProjectComp = ({title, imageTitle, imageUrl, description, web
 
                         </Typography>
 
-                    </CardContent>
+                    </Box>
 
                     <Box className={classes.gitSite}>
 
@@ -72,7 +73,7 @@ export const SingleProjectComp = ({title, imageTitle, imageUrl, description, web
                         
                         {
                             techUsed.map(item => 
-                                <Box className={classes.techLogo}>
+                                <Box key={uuid()} className={classes.techLogo}>
                                     {item}
                                 </Box>
                             )
@@ -82,7 +83,7 @@ export const SingleProjectComp = ({title, imageTitle, imageUrl, description, web
 
                 </CardActions>
 
-            </Card>
+            </Box>
 
         </Container>
     )
@@ -92,8 +93,11 @@ const Container = styled.div`
     position: relative;
     width: 100%;
     margin: 10px 0 50px;
-`;
 
+    @media (max-width: 500px) {
+        margin: 30px 0 30px;
+    }
+`;
 const useStyles = makeStyles(theme=>({
     root: {
         width: '100%',
@@ -101,13 +105,16 @@ const useStyles = makeStyles(theme=>({
         padding: 20,
         background: 'none',
         justifyContent: 'space-between',
+        alignItems: 'center',
 
         [theme.breakpoints.down(1390)]: {
             flexDirection: 'column !important'         
         },
 
         [theme.breakpoints.down(500)]:{
-            width: 300
+            padding: 0,
+            width: '100%',
+            margin: 0
         }
     },
 
@@ -124,7 +131,11 @@ const useStyles = makeStyles(theme=>({
         },
 
         [theme.breakpoints.down(500)]: {
-            height: 300
+            width: '100%',
+            height: 300,
+            padding: 5,
+            border: '1px solid #fff',
+            borderRadius: 20
         },
     },
 
@@ -138,7 +149,11 @@ const useStyles = makeStyles(theme=>({
 
     head: {
         color: '#58ba9d',
-        textAlign: 'center'
+        textAlign: 'center',
+
+        [theme.breakpoints.down(500)]: {
+            marginTop: 20
+        }
     },
 
     description: {
@@ -150,7 +165,6 @@ const useStyles = makeStyles(theme=>({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        // justifyContent: 'center',
         width: '38%',
 
         [theme.breakpoints.down(1390)]: {
@@ -160,7 +174,7 @@ const useStyles = makeStyles(theme=>({
 
     gitSite: {
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         width: '100%',
         padding: theme.spacing(0, 6),
         
@@ -180,11 +194,7 @@ const useStyles = makeStyles(theme=>({
         textDecoration: 'none',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: '15px 0',
-
-        [theme.breakpoints.down(1390)]: {
-            margin: 20
-        },
+        margin: '15px 20px 15px 0',
     },
 
     gitSiteLogo: {
@@ -216,7 +226,12 @@ const useStyles = makeStyles(theme=>({
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        width: '80%',
+
+        [theme.breakpoints.down(500)]: {
+            width: '100%'
+        }
     },
 
     techLogo: {

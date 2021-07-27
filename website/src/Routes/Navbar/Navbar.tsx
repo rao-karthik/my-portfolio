@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import clsx from 'clsx';
 import { HamburgerNavbar } from './HamburgerDrawer';
 
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Navbar () {
 
@@ -37,11 +37,15 @@ export default function Navbar () {
                     <Box className={classes.mainCont}>
                             
 
-                            <Box className={classes.imageBox}>
-                                
-                                <img className={classes.image} src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Logo%2FwhiteLogo.png?alt=media&token=faa28b65-bac4-4a80-9f48-cfeba46a9db3" alt='Kartik' />
+                            <Link to='/'>
+                            
+                                <Box className={classes.imageBox}>
+                                    
+                                    <img className={classes.image} src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Logo%2FwhiteLogo.png?alt=media&token=faa28b65-bac4-4a80-9f48-cfeba46a9db3" alt='Kartik' />
 
-                            </Box>
+                                </Box>
+                            
+                            </Link>
 
                             <NavLink to='/' className={classes.tagCont} exact activeClassName={classes.activeTag} >
 
@@ -76,6 +80,9 @@ export default function Navbar () {
 
 const Container = styled.div`
     position: relative;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
 `;
 
 const drawerWidth = 260;

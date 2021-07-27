@@ -23,7 +23,7 @@ export default function About () {
 
                     <Box className={classes.imageBox}>
 
-                        <img className={classes.image} src='https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Resume%2FPic.jpg?alt=media&token=2d7267e1-bc04-4765-8125-82ea3381876e' alt='' />
+                        <img className={classes.image} src='https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Resume%2FprofilePic.jpeg?alt=media&token=47535a8f-3c4a-4aff-b9c1-be66afc3e553' alt='' />
 
                     </Box>
 
@@ -51,8 +51,10 @@ export default function About () {
 
 const Container = styled.div`,
     width: 100%;
-    height: 800px;
+    height: 100%;
+    height: 93vh;
     background: #222222;
+    padding: 60px 0 0;
 
     @media (max-width: 800px) {
         height: auto;
@@ -64,6 +66,10 @@ const useStyles = makeStyles(theme=>({
         width: '70%',
         margin: 'auto',
         paddingTop: 40,
+
+        [theme.breakpoints.down(500)]: {
+            width: '90%'
+        }
     },
 
     about: {
@@ -120,7 +126,7 @@ const useStyles = makeStyles(theme=>({
 
     image: {
         width: '100%',
-        heught: '70%',
+        height: '100%',
         borderRadius: '50%',
     },
 

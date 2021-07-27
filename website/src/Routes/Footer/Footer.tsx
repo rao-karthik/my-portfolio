@@ -1,10 +1,6 @@
 import React from 'react';
-import { Box, makeStyles } from '@material-ui/core';
+import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components'
-
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import { Link } from 'react-router-dom';
 
 export default function Footer () {
 
@@ -12,26 +8,17 @@ export default function Footer () {
 
     return (
         <Container>
-            
-            <Box className={classes.iconCont}>
 
-                <Link to={{pathname: 'https://github.com/rao-kartik'}} 
-                      target='_blank'
-                      className={classes.iconLink} >
-                
-                    <GitHubIcon className={classes.githubIcon} />
+            <Box className={classes.footerContainer}>
 
-                </Link>
+                <Typography className={classes.copyRighttext}>
 
-                <Link to={{pathname: 'https://www.linkedin.com/in/kartik-yadav-r/'}} 
-                      target='_blank'
-                      className={classes.iconLink} >
-                
-                    <LinkedInIcon className={classes.linkedIcon} />
+                    Copyright © 2021 Kartik Yadav - All Rights Reserved.
 
-                </Link>
+                </Typography>
 
             </Box>
+
         </Container>
     )
 }
@@ -44,25 +31,28 @@ const Container = styled.div`
 `;
 
 const useStyles = makeStyles(theme=>({
-    iconCont: {
+
+    footerContainer: {
         width: '70%',
         height: '100%',
-        margin: 'auto',
         display: 'flex',
-        flexDirection: 'row-reverse',
-        borderTop: '1px solid #424242'
-    },
-    iconLink: {
-        color: '#58ba9d',
-        textDecoration: 'none',
-        display: 'flex',
+        justifyContent: 'center',
         alignItems: 'center',
+        borderTop: '1px solid #424242',
+        margin: 'auto',
+
+        [theme.breakpoints.down(500)]: {
+            width: '90%'
+        }
     },
-    linkedIcon: {
-        fontSize: 40
-    },
-    githubIcon: {
-        fontSize: 33,
-        marginLeft: 10
+
+    copyRighttext: {
+        color: '#fff',
+        fontWeight: 400,
+
+        [theme.breakpoints.down(500)]: {
+            textAlign: 'center',
+            paddingTop: 10
+        }
     }
 }));

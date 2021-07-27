@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import PhoneIcon from '@material-ui/icons/Phone';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import { useForm } from '@formspree/react';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { Link } from 'react-router-dom';
 
 import { ContactForm } from './ContactForm';
 
@@ -19,6 +22,26 @@ export default function Contact () {
             <Box className={classes.contactBox}>
 
                 <Typography variant='h3' className={classes.contact}>Contact <span className={classes.me}>Me</span></Typography>
+
+                <Box className={classes.iconCont}>
+                                
+                    <Link to={{pathname: 'https://github.com/rao-kartik'}} 
+                        target='_blank'
+                        className={classes.iconLink} >
+                    
+                        <GitHubIcon className={classes.githubIcon} />
+
+                    </Link>
+
+                    <Link to={{pathname: 'https://www.linkedin.com/in/kartik-yadav-r/'}} 
+                        target='_blank'
+                        className={classes.iconLink} >
+                    
+                        <LinkedInIcon className={classes.linkedIcon} />
+
+                    </Link>
+
+                </Box>
                 
             </Box>
 
@@ -30,25 +53,48 @@ export default function Contact () {
                     {
                         !state.succeeded &&
 
-                        <Box className={classes.details}>
+                        <>
+                            <Box className={classes.iconContAfter}>
+                                
+                                <Link to={{pathname: 'https://github.com/rao-kartik'}} 
+                                    target='_blank'
+                                    className={classes.iconLink} >
+                                
+                                    <GitHubIcon className={classes.githubIcon} />
+            
+                                </Link>
+            
+                                <Link to={{pathname: 'https://www.linkedin.com/in/kartik-yadav-r/'}} 
+                                    target='_blank'
+                                    className={classes.iconLink} >
+                                
+                                    <LinkedInIcon className={classes.linkedIcon} />
+            
+                                </Link>
+            
+                            </Box>
 
-                            <Typography className={classes.contactDetails} style={{marginLeft: 0}}>
+                            <Box className={classes.details}>
 
-                                <PhoneIcon className={classes.icons} />
+                                <Typography className={classes.contactDetails} style={{marginLeft: 0}}>
 
-                                8607050509
+                                    <PhoneIcon className={classes.icons} />
 
-                            </Typography>
+                                    8607050509
 
-                            <Typography className={classes.contactDetails}>
+                                </Typography>
 
-                                <AlternateEmailIcon className={classes.icons} />
+                                <Typography className={classes.contactDetails}>
 
-                                contact@kartikyadav.in
+                                    <AlternateEmailIcon className={classes.icons} />
 
-                            </Typography>
+                                    contact@kartikyadav.in
 
-                        </Box>
+                                </Typography>
+
+                            </Box>
+
+                        </>
                     }
                     
                 </Box>
@@ -68,12 +114,13 @@ const Container = styled.div`
     background: #222222;
     position: relative;
     color: #fff;
+    padding: 60px 0 0;
 `;
 
 const useStyles = makeStyles(theme=>({
     mainCont: {
         width: '70%',
-        height: '650px',
+        height: '660px',
         margin: 'auto',
         display: 'flex',
         flexDirection: 'column',
@@ -93,7 +140,13 @@ const useStyles = makeStyles(theme=>({
         borderBottom: '1px solid #424242',
         marginBottom: 30,
         margin: 'auto',
-        paddingTop: 40
+        paddingTop: 40,
+        display: 'flex',
+        justifyContent: 'space-between',
+
+        [theme.breakpoints.down(500)]: {
+            width: '90%',
+        }
     },
 
     contact: {
@@ -117,7 +170,7 @@ const useStyles = makeStyles(theme=>({
         display: 'flex',
         margin: theme.spacing(2),
         
-        [theme.breakpoints.down(500)]: {
+        [theme.breakpoints.down(670)]: {
             flexDirection: 'column',
             alignItems: 'center'
         }
@@ -138,5 +191,45 @@ const useStyles = makeStyles(theme=>({
         marginRight: 10,
         position: 'relative',
         top: 5
-    }
+    },
+
+    iconCont: {
+        height: '70px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+
+        [theme.breakpoints.down(500)]: {
+            display: 'none'
+        }
+    },
+
+    iconContAfter: {
+        height: '70px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        top: 10,
+
+        [theme.breakpoints.up(500)]: {
+            display: 'none'
+        }
+    },
+
+    iconLink: {
+        color: '#58ba9d',
+        textDecoration: 'none',
+        display: 'flex',
+        alignItems: 'center',
+    },
+
+    linkedIcon: {
+        fontSize: 40,
+        marginLeft: 20
+    },
+
+    githubIcon: {
+        fontSize: 33,
+    },
 }));

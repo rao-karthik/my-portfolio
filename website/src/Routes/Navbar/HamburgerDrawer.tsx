@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Drawer, makeStyles, Typography } from '@material-ui/core';
+import { Box, Divider, Drawer, makeStyles, Typography } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import HomeIcon from '@material-ui/icons/Home';
 import CallIcon from '@material-ui/icons/Call';
 import PersonIcon from '@material-ui/icons/Person';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import { Link } from 'react-router-dom';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 interface IHamburgerDrawerProps {
     open: boolean;
@@ -33,55 +35,94 @@ export const HamburgerNavbar = ({open, handleDrawerClose}: IHamburgerDrawerProps
                 <CloseIcon className={`${classes.closeIcon} ${classes.drawerClose}`} 
                             onClick={handleDrawerClose} />
 
-                <Box className={classes.tagsBox}>
+                <Box>
+                    <Box className={classes.tagsBox}>
 
-                    <Link to='/' style={{textDecoration: 'none'}}>
+                        <Box className={classes.logoCont}>
 
-                        <Box className={classes.tagCont} onClick={handleDrawerClose} >
-
-                            <HomeIcon className={classes.tagIcon} />
-
-                            <Typography className={classes.drawerTags}>Home</Typography>
+                            <img className={classes.logo} src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Logo%2FblackLogo.png?alt=media&token=b16700a3-4011-416d-9bc2-e791a717c010" alt="k" />
 
                         </Box>
 
-                    </Link>
+                        <Divider />
 
-                    <Link to='/about' style={{textDecoration: 'none'}}>
+                        <Link to='/' style={{textDecoration: 'none'}}>
 
-                        <Box className={classes.tagCont} onClick={handleDrawerClose} >
+                            <Box className={classes.tagCont} onClick={handleDrawerClose} >
 
-                            <PersonIcon className={classes.tagIcon} />
-                            
-                            <Typography className={classes.drawerTags}>About</Typography>
+                                <HomeIcon className={classes.tagIcon} />
 
-                        </Box>
+                                <Typography className={classes.drawerTags}>Home</Typography>
 
-                    </Link>
+                            </Box>
 
-                    <Link to='/contact' style={{textDecoration: 'none'}}>
+                        </Link>
 
-                        <Box className={classes.tagCont} onClick={handleDrawerClose} >
+                        <Divider />
 
-                            <CallIcon className={classes.tagIcon} />
+                        <Link to='/about' style={{textDecoration: 'none'}}>
 
-                            <Typography className={classes.drawerTags}>Contact</Typography>
+                            <Box className={classes.tagCont} onClick={handleDrawerClose} >
 
-                        </Box>
+                                <PersonIcon className={classes.tagIcon} />
+                                
+                                <Typography className={classes.drawerTags}>About</Typography>
 
-                    </Link>
+                            </Box>
 
-                    <Link to='/resume' style={{textDecoration: 'none'}}>
+                        </Link>
 
-                        <Box className={classes.tagCont} onClick={handleDrawerClose} >
+                        <Divider />
 
-                            <AssignmentIcon className={classes.tagIcon} />
+                        <Link to='/contact' style={{textDecoration: 'none'}}>
 
-                            <Typography className={classes.drawerTags}>Resume</Typography>
+                            <Box className={classes.tagCont} onClick={handleDrawerClose} >
 
-                        </Box>
+                                <CallIcon className={classes.tagIcon} />
 
-                    </Link>
+                                <Typography className={classes.drawerTags}>Contact</Typography>
+
+                            </Box>
+
+                        </Link>
+
+                        <Divider />
+
+                        <Link to='/resume' style={{textDecoration: 'none'}}>
+
+                            <Box className={classes.tagCont} onClick={handleDrawerClose} >
+
+                                <AssignmentIcon className={classes.tagIcon} />
+
+                                <Typography className={classes.drawerTags}>Resume</Typography>
+
+                            </Box>
+
+                        </Link>
+
+                        <Divider />
+
+                    </Box>
+
+                    <Box className={classes.iconCont}>
+                                
+                        <Link to={{pathname: 'https://github.com/rao-kartik'}} 
+                            target='_blank'
+                            className={classes.iconLink} >
+                        
+                            <GitHubIcon className={classes.githubIcon} />
+
+                        </Link>
+
+                        <Link to={{pathname: 'https://www.linkedin.com/in/kartik-yadav-r/'}} 
+                            target='_blank'
+                            className={classes.iconLink} >
+                        
+                            <LinkedInIcon className={classes.linkedIcon} />
+
+                        </Link>
+
+                    </Box>
 
                 </Box>
                 
@@ -96,8 +137,20 @@ const Container = styled.div`
 `;
 
 const drawerWidth = 260;
+const logoDim = 100;
 
 const useStyles = makeStyles(theme=>({
+    logoCont: {
+        width: logoDim,
+        height: logoDim,
+        margin: '0 auto 20px'
+    },
+
+    logo: {
+        width: '100%',
+        height: '!00%'
+    },
+
     drawer: {
         width: drawerWidth,
         flexShrink: 0,
@@ -106,7 +159,7 @@ const useStyles = makeStyles(theme=>({
 
     drawerPaper: {
         width: drawerWidth,
-        padding: theme.spacing(7,0, 4),
+        padding: theme.spacing(1,0, 4),
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between'
@@ -132,23 +185,49 @@ const useStyles = makeStyles(theme=>({
 
     tagsBox: {
         width: '100%',
-        padding: theme.spacing(4, 0, 8, 4)
+        padding: theme.spacing(4, 0, 2, 0)
     },
 
     tagCont: {
         display: 'flex',
+        paddingLeft: 20,
+        margin: 15
     },
 
     drawerTags: {
-        fontSize: 25,
-        color: '#9e9e9e'
+        fontSize: 20,
+        color: '#000'
     },
 
     tagIcon: {
-        color: '#9e9e9e',
+        color: '#58ba9d',
         marginRight: theme.spacing(2),
-        fontSize: 30,
+        fontSize: 25,
         position: 'relative',
         top: '3px'
-    }
+    },
+
+    iconCont: {
+        width: '100%',
+        height: '70px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    iconLink: {
+        color: '#58ba9d',
+        textDecoration: 'none',
+        display: 'flex',
+        alignItems: 'center',
+    },
+
+    linkedIcon: {
+        fontSize: 40,
+        marginLeft: 20
+    },
+
+    githubIcon: {
+        fontSize: 33,
+    },
 }));

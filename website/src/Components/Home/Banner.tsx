@@ -45,6 +45,7 @@ const Container = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
+    height: 100vh;
 `;
 
 const useStyles = makeStyles(theme=>({
@@ -52,6 +53,7 @@ const useStyles = makeStyles(theme=>({
     headCont: {
         display: 'flex',
         width: '70%',
+        height: '100%',
         alignItems: 'center',
         margin: 'auto',
         borderBottom: '1px solid #424242',
@@ -63,24 +65,38 @@ const useStyles = makeStyles(theme=>({
     
     nameBox: {
         width: '100%',
-        height: '600px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-
-        [theme.breakpoints.down(500)]: {
-            height: '200px',
-            padding: theme.spacing(0, 1),
+        
+        [theme.breakpoints.down(1030)]: {
+            height: '500px',
+            paddingRight: '30px'
         },
-
+        
         [theme.breakpoints.down(770)]: {
             height: '400px'
         },
 
-        [theme.breakpoints.down(1030)]: {
+        [theme.breakpoints.down(500)]: {
+            height: '560px',
+            padding: theme.spacing(0, 1, 1),
+        },
+
+        [theme.breakpoints.down(500)]: {
+            height: '560px',
+            padding: theme.spacing(0, 1, 1),
+        },
+
+        [theme.breakpoints.down(400)]: {
+            height: '560px',
+            padding: theme.spacing(0, 1),
+        },
+
+        [theme.breakpoints.down(350)]: {
             height: '500px',
-            paddingRight: '30px'
-        }
+            padding: theme.spacing(0, 1),
+        },
     },
 
     name: {
@@ -89,19 +105,36 @@ const useStyles = makeStyles(theme=>({
         fontWeight: 600,
         fontFamily: 'Tangerine, cursive',
 
+        [theme.breakpoints.down(1140)]: {
+            lineHeight: '72px',
+            fontSize: 80,
+            marginBottom: 20
+        },
+
         [theme.breakpoints.down(550)]: {
             lineHeight: '72px',
-            textAlign: 'center'
+            textAlign: 'center',
+            fontSize: 65,
         },
 
         [theme.breakpoints.up(550)]: {
             marginTop: '-80px'
         },
 
-        [theme.breakpoints.down(1140)]: {
-            lineHeight: '72px',
-            fontSize: 80
+        [theme.breakpoints.down(400)]: {
+            lineHeight: '70px',
+            textAlign: 'center',
+            fontSize: 70,
+            marginBottom: 0
         },
+
+        [theme.breakpoints.down(350)]: {
+            lineHeight: '50px',
+            textAlign: 'center',
+            fontSize: 50,
+            marginBottom: 0
+        },
+
     },
 
     headText: {
@@ -109,7 +142,13 @@ const useStyles = makeStyles(theme=>({
         fontSize: 20,
 
         [theme.breakpoints.down(550)]: {
-            textAlign: 'center'
+            textAlign: 'center',
+            marginTop: 30
+        },
+
+        [theme.breakpoints.down(400)]: {
+            textAlign: 'center',
+            marginTop: 20
         },
     },
 
