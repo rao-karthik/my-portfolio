@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, CardActionArea, CardActions, CardMedia, makeStyles, Typography } from '@material-ui/core';
+import { Box, CardActionArea, CardActions, makeStyles, Typography } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LanguageIcon from '@material-ui/icons/Language';
 import { v4 as uuid} from 'uuid';
 
-import { IProjectList } from './Projects';
+import { IProjectData } from './ProjectData';
 import { Link } from 'react-router-dom';
 
-export const SingleProjectComp = ({title, imageTitle, imageUrl, description, website, githubLink, flexDirection, techUsed}: IProjectList,) => {
+export const SingleProjectComp = ({title, imageTitle, imageUrl, description, website, githubLink, flexDirection, techUsed}: IProjectData,) => {
 
     const classes = useStyles();
     
@@ -19,11 +19,7 @@ export const SingleProjectComp = ({title, imageTitle, imageUrl, description, web
 
                 <CardActionArea className={classes.mediaBox}>
 
-                    <CardMedia
-                        className={classes.media}
-                        image={imageUrl}
-                        title= {imageTitle}
-                    />
+                    <img className={classes.media} src={imageUrl} alt={imageTitle} />
 
                 </CardActionArea>
 

@@ -13,7 +13,7 @@ import TypescriptLogo from '../../Logos/TypescriptLogo';
 import LinkedInLearning from '../../Assets/ProjectGifs/LinkedInLearning.gif';
 import Indeed from '../../Assets/ProjectGifs/Indeed.gif';
 import Himalaya from '../../Assets/ProjectGifs/Himalaya.gif';
-import Railyatri from '../../Assets/ProjectGifs/railyatri.gif';
+// import Railyatri from '../../Assets/ProjectGifs/railyatri.gif';
 import Chargebee from '../../Assets/ProjectGifs/Chargebee.gif';
 
 export interface IProjectData {

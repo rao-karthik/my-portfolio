@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { AppBar, Box, makeStyles, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import { HamburgerNavbar } from './HamburgerDrawer';
 
 import { Link, NavLink } from 'react-router-dom';
-import { ScrollContext } from '../../Context/ScrollContextProvider';
+// import { ScrollContext } from '../../Context/ScrollContextProvider';
 import whiteLogo from '../../Assets/whiteLogo.png'
 
 export default function Navbar () {
@@ -16,7 +16,7 @@ export default function Navbar () {
     
     const [ open, setOpen ] = React.useState(false);
 
-    let { scrollToProject, scrollToSkills }: any = useContext(ScrollContext);
+    // const { scrollToProject, scrollToSkills }: any = useContext(ScrollContext);
 
     const handleDrawerOpen: React.MouseEventHandler<SVGSVGElement> = () => {
         setOpen(true);
