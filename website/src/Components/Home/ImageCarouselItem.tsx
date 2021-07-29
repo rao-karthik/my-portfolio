@@ -27,7 +27,7 @@ export const ImageCarousalItem = ({item}: IImageCarosalItemProps) => {
 
 const Container = styled.div`
     width: 100%;
-    height: 250px;
+    height: 100%;
 `;
 
 const useStyles = makeStyles(theme=>({
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme=>({
 
 
         [theme.breakpoints.down(1025)]: {
-            height: '185px'
+            height: '190px',
         },
     },
     image: {

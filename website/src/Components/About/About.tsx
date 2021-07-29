@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, makeStyles, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
-import profilePic from '../../Assets/profilePic.jpg';
+import profilePic from '../../Assets/profilePic.jpeg';
 
 export default function About () {
 
@@ -70,7 +70,6 @@ export default function About () {
 const Container = styled.div`,
     width: 100%;
     height: 100%;
-    height: 93vh;
     background: #000;
     padding: 60px 0 0;
 
@@ -82,8 +81,21 @@ const Container = styled.div`,
 const useStyles = makeStyles(theme=>({
     mainCont: {
         width: '70%',
+        height: 'auto',
         margin: 'auto',
         paddingTop: 40,
+
+        [theme.breakpoints.down(1080)]: {
+            width: '90%'
+        },
+
+        [theme.breakpoints.up(700)]: {
+            height: 810
+        },
+
+        [theme.breakpoints.between(500, 800)]: {
+            height: 900
+        },
 
         [theme.breakpoints.down(500)]: {
             width: '90%'
@@ -126,12 +138,14 @@ const useStyles = makeStyles(theme=>({
         height: 600,
         justifyContent: 'center',
         alignItems: 'center',
-        // padding: theme.spacing(0, 10),
 
         [theme.breakpoints.down(800)]: {
             flexDirection: 'column',
             height: 'auto',
-            marginTop: 30
+            marginTop: 60,
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingBottom: 30
         }
     },
 
@@ -152,6 +166,10 @@ const useStyles = makeStyles(theme=>({
         color: '#fff',
         paddingLeft: 20,
         lineHeight: 2,
+
+        [theme.breakpoints.down(1080)]: {
+            lineHeight: 1.2
+        },
 
         [theme.breakpoints.down(500)]: {
             fontSize: 30,
@@ -177,17 +195,17 @@ const useStyles = makeStyles(theme=>({
         color: '#fff',
         textAlign: 'left',
         fontSize: 20,
-        width: 500,
+        width: 600,
         paddingLeft: 20,
         lineHeight: 1.5,
         marginBottom: 10,
 
+        [theme.breakpoints.between(800, 1080)]: {
+            width: 500
+        },
+
         [theme.breakpoints.down(550)]: {
             width: 300,
         },
-
-        [theme.breakpoints.between(800, 1070)]: {
-            width: 250
-        }
     }
 }));

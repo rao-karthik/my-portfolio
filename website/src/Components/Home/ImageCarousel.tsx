@@ -4,12 +4,6 @@ import styled from 'styled-components';
 
 import { ImageCarousalItem } from './ImageCarouselItem';
 
-import linkedInLearning from '../../Assets/ProjectCarousel/LinkedIn.png';
-import himalaya from '../../Assets/ProjectCarousel/Himalaya.png';
-import indeed from '../../Assets/ProjectCarousel/Indeed.png';
-import chargeBee from '../../Assets/ProjectCarousel/Chargebee.png';
-// import railYatri from '../../Assets/ProjectCarousel/railYatri.png';
-
 export interface IImageCarouselProps {
     image: string
 }
@@ -17,19 +11,19 @@ export interface IImageCarouselProps {
 export const ImageCarousel = () => {
     var items: Array<IImageCarouselProps> = [
         {
-            image: linkedInLearning
+            image: "https://kartik-yadav-portfolio.s3.ap-south-1.amazonaws.com/Project/ProjectCarousel/LinkedIn.png"
         },
         {
-            image: indeed
+            image: "https://kartik-yadav-portfolio.s3.ap-south-1.amazonaws.com/Project/ProjectCarousel/Indeed.png"
         },
         // {
-        //     image: railYatri
+        //     image: "https://kartik-yadav-portfolio.s3.ap-south-1.amazonaws.com/Project/ProjectCarousel/railyatri.png"
         // },
         {
-            image: himalaya
+            image: "https://kartik-yadav-portfolio.s3.ap-south-1.amazonaws.com/Project/ProjectCarousel/Himalaya.png"
         },
         {
-            image: chargeBee
+            image: "https://kartik-yadav-portfolio.s3.ap-south-1.amazonaws.com/Project/ProjectCarousel/Chargebee.png"
         }
     ]
 
@@ -60,4 +54,8 @@ export const ImageCarousel = () => {
 const Container = styled.div`
     width: 100%;
     height: 250px;
+
+    @media (max-width: 1025px){
+        height: 190px;
+    }
 `;

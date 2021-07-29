@@ -10,12 +10,6 @@ import MongoDbLogo from '../../Logos/MongoDbLogo';
 import AwsLogo from '../../Logos/AwsLogo';
 import TypescriptLogo from '../../Logos/TypescriptLogo';
 
-import LinkedInLearning from '../../Assets/ProjectGifs/LinkedInLearning.gif';
-import Indeed from '../../Assets/ProjectGifs/Indeed.gif';
-import Himalaya from '../../Assets/ProjectGifs/Himalaya.gif';
-// import Railyatri from '../../Assets/ProjectGifs/railyatri.gif';
-import Chargebee from '../../Assets/ProjectGifs/Chargebee.gif';
-
 export interface IProjectData {
     title: string;
     imageTitle: string;
@@ -33,7 +27,7 @@ const ProjectData: IProjectData[] = [
 
         imageTitle: 'Linked Learning',
 
-        imageUrl: LinkedInLearning,
+        imageUrl: "https://kartik-yadav-portfolio.s3.ap-south-1.amazonaws.com/Project/ProjectGifs/LinkedInLearning.gif",
 
         description: 'It is an e-Learning Platform. Here a user can access all the course on single subscription(using stripes). The user can search for the desired course. Also the user can become an instructor and upload videos (aws-s3).',
 
@@ -54,7 +48,7 @@ const ProjectData: IProjectData[] = [
 
         imageTitle: 'Indeed',
 
-        imageUrl: Indeed,
+        imageUrl: 'https://kartik-yadav-portfolio.s3.ap-south-1.amazonaws.com/Project/ProjectGifs/Indeed.gif',
 
         description: 'It is an online job portal where a job-seeker can search for jobs depending upon the category or location or both. There is an admin portal where admin have access to all jobs and recruiter. The admin can add or delete any job or recruiter.',
 
@@ -74,7 +68,7 @@ const ProjectData: IProjectData[] = [
 
     //     imageTitle: 'railyatri',
 
-        // imageUrl: Railyatri,
+        // imageUrl: 'https://s3.console.aws.amazon.com/s3/object/kartik-yadav-portfolio?region=ap-south-1&prefix=Project/ProjectGifs/railyatri.gif',
 
     //     description: 'It is an online e-ticketing platform. Implement the bus-ticket booking platform. The user can search for buses according to desired location and date. On successful search the user can look for buses and depending upon the suitability book a seat of his choice in his desired bus.',
 
@@ -94,7 +88,7 @@ const ProjectData: IProjectData[] = [
 
         imageTitle: 'Himalaya',
 
-        imageUrl: Himalaya,
+        imageUrl: 'https://kartik-yadav-portfolio.s3.ap-south-1.amazonaws.com/Project/ProjectGifs/Himalaya.gif',
 
         description: 'It is a herbal product e-commerce website. The user can search for the products and add the desired product in cart and make the payment after successful login.',
 
@@ -111,7 +105,7 @@ const ProjectData: IProjectData[] = [
 
         imageTitle: 'Chargebee',
 
-        imageUrl: Chargebee,
+        imageUrl: 'https://kartik-yadav-portfolio.s3.ap-south-1.amazonaws.com/Project/ProjectGifs/Chargebee.gif',
 
         description: 'It is a subscription management system which can help you handle all the aspects of the subscription life cycle including recurring billing, invoicing and trial management for your customers.',
 

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default function Resume () {
     return (
         <Container>
-            <Embed src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Resume%2FKartik%20Resume.pdf?alt=media&token=f17e3865-ff9d-42aa-a241-9c818aa4b787" type="application/pdf" />
+            <Embed src="https://kartik-yadav-portfolio.s3.ap-south-1.amazonaws.com/resume/KartikResume.pdf" type="application/pdf" />
         </Container>
     )
 }
