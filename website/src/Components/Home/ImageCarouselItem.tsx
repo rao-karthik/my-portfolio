@@ -35,7 +35,6 @@ const useStyles = makeStyles(theme=>({
         width: '100%',
         height: '250px',
 
-
         [theme.breakpoints.down(1025)]: {
             height: '190px',
         },
