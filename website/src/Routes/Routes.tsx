@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Router, Switch } from 'react-router-dom';
+import { Route, Router, Switch, useLocation } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 import Navbar from './Navbar/Navbar';
@@ -14,6 +14,10 @@ import ScrollToTop from './ScrollToTop';
 export default function Routes () {
 
     const history = createBrowserHistory();
+
+    const location = useLocation();
+
+    const path = location.pathname;
 
     return (
         <Container>
@@ -51,7 +55,10 @@ export default function Routes () {
 
                 </Switch>
 
-                <Footer />
+                {
+                    path !== '/resume' && 
+                    <Footer />
+                }
 
             </Router>
 
