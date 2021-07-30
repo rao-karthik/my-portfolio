@@ -48,6 +48,10 @@ const useStyles = makeStyles(theme=>({
         textAlign: 'center',
         padding: theme.spacing(4, 0, 2),
 
+        [theme.breakpoints.down(1030)]: {
+            width: '90%'
+        },
+
         [theme.breakpoints.down(500)]: {
             width: '100%',
             padding: theme.spacing(4, 0, 1)
@@ -69,6 +73,10 @@ const useStyles = makeStyles(theme=>({
         justifyContent: 'center',
         flexWrap: 'wrap',
         borderBottom: '1px solid #424242',
+
+        [theme.breakpoints.down(1030)]: {
+            width: '90%'
+        },
 
         [theme.breakpoints.down(500)]: {
             width: '100%',

@@ -41,6 +41,10 @@ const useStyles = makeStyles(theme=>({
         borderTop: '1px solid #424242',
         margin: 'auto',
 
+        [theme.breakpoints.down(1030)]: {
+            width: '90%'
+        },
+
         [theme.breakpoints.down(500)]: {
             width: '90%'
         }

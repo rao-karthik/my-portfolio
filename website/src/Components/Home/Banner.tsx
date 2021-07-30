@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme=>({
         margin: 'auto',
         borderBottom: '1px solid #424242',
 
-        [theme.breakpoints.down(500)]: {
+        [theme.breakpoints.down(1030)]: {
             width: '90%'
         }
     },
@@ -109,6 +109,10 @@ const useStyles = makeStyles(theme=>({
             lineHeight: '72px',
             fontSize: 80,
             marginBottom: 20
+        },
+
+        [theme.breakpoints.down(1030)]: {
+            fontSize: 70
         },
 
         [theme.breakpoints.down(550)]: {

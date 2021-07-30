@@ -198,6 +198,10 @@ const useStyles = makeStyles(theme=>({
         textAlign: 'center',
         padding: theme.spacing(4, 0, 0),
 
+        [theme.breakpoints.down(1030)]: {
+            width: '90%'
+        },
+
         [theme.breakpoints.down(500)]: {
             width: '90%',
         }

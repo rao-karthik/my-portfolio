@@ -129,6 +129,10 @@ const useStyles = makeStyles(theme=>({
         alignItems: 'center',
         justifyContent: 'center',
 
+        [theme.breakpoints.down(1030)]: {
+            width: '90%'
+        },
+
         [theme.breakpoints.down(500)]: {
             height: 650
         }
@@ -143,6 +147,10 @@ const useStyles = makeStyles(theme=>({
         paddingTop: 40,
         display: 'flex',
         justifyContent: 'space-between',
+
+        [theme.breakpoints.down(1030)]: {
+            width: '90%'
+        },
 
         [theme.breakpoints.down(500)]: {
             width: '90%',
