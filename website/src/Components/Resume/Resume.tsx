@@ -5,7 +5,7 @@ export default function Resume () {
     
     return (
         <Container>
-            <Embed src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Resume%2FKartik%20Resume.pdf?alt=media&token=89d8722c-0b24-441a-a0bb-31fefd6400c0" type="application/pdf" />
+            <Embed src="https://firebasestorage.googleapis.com/v0/b/rao-kartik.appspot.com/o/Resume%2FKartik%20Resume.pdf?alt=media&token=4964b2ab-33fa-45ff-abd3-3609db0a7df6" type="application/pdf" />
         </Container>
     )
 }
