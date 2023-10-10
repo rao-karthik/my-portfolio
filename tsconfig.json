@@ -4,7 +4,7 @@
     "target": "ES5",
     "lib": ["dom", "dom.iterable"],
     "allowJs": false,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -13,9 +13,6 @@
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
     "incremental": true
-  },
-  "paths": {
-    "@/*": ["./*"]
   },
   "exclude": ["node_modules", "build"],
   "include": ["**/*.ts", "**/*.tsx"]
