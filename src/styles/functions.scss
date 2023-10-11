@@ -1,0 +1,60 @@
+@function getRelativeDim($dim, $screen-size) {
+  @if $screen-size >= 1920 {
+    @return $dim;
+  }
+  @return round($dim * ($screen-size / 1920));
+}
+
+@mixin glassmorphism {
+  $screen-size: 1920;
+  backdrop-filter: blur(getRelativeDim(16px, $screen-size)) saturate(180%);
+  -webkit-backdrop-filter: blur(getRelativeDim(16px, $screen-size)) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: getRelativeDim(16px, $screen-size);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  @include for-size(desktop-lg) {
+    $screen-size: 1680;
+    backdrop-filter: blur(getRelativeDim(16px, $screen-size)) saturate(180%);
+    -webkit-backdrop-filter: blur(getRelativeDim(16px, $screen-size)) saturate(180%);
+    border-radius: getRelativeDim(16px, $screen-size);
+  }
+  @include for-size(desktop) {
+    $screen-size: 1536;
+    backdrop-filter: blur(getRelativeDim(16px, $screen-size)) saturate(180%);
+    -webkit-backdrop-filter: blur(getRelativeDim(16px, $screen-size)) saturate(180%);
+    border-radius: getRelativeDim(16px, $screen-size);
+  }
+  @include for-size(desktop-md) {
+    $screen-size: 1366;
+    backdrop-filter: blur(getRelativeDim(16px, $screen-size)) saturate(180%);
+    -webkit-backdrop-filter: blur(getRelativeDim(16px, $screen-size)) saturate(180%);
+    border-radius: getRelativeDim(16px, $screen-size);
+  }
+  @include for-size(desktop-sm) {
+    $screen-size: 1280;
+    backdrop-filter: blur(getRelativeDim(16px, $screen-size)) saturate(180%);
+    -webkit-backdrop-filter: blur(getRelativeDim(16px, $screen-size)) saturate(180%);
+    border-radius: getRelativeDim(16px, $screen-size);
+  }
+}
+
+@mixin for-size($size) {
+  @if $size == desktop-sm {
+    @media only screen and (max-width: 1280px) {
+      @content;
+    }
+  } @else if $size == desktop-md {
+    @media only screen and (max-width: 1366px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media only screen and (max-width: 1536px) {
+      @content;
+    }
+  } @else if $size == desktop-lg {
+    @media only screen and (max-width: 1680px) {
+      @content;
+    }
+  }
+}

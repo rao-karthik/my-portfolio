@@ -1,0 +1,15 @@
+.layout_wrapper {
+  width: 100%;
+
+  .app_bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('../../../public/images/mainBg.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.9;
+  }
+}

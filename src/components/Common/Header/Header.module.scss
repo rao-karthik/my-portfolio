@@ -1,0 +1,188 @@
+@use '../../../styles/variables' as vars;
+
+$screen-size: vars.$screen-size;
+$header-wrapper-padding: vars.getRelativeDim(20px, $screen-size);
+$header-padding-x: vars.getRelativeDim(32px, $screen-size);
+$header-padding-y: vars.getRelativeDim(24px, $screen-size);
+
+.header_wrapper {
+  width: 100%;
+  padding: $header-wrapper-padding 0;
+  overflow: hidden;
+
+  @include vars.for-size(desktop-lg) {
+    $screen-size: 1680;
+    $header-wrapper-padding: vars.getRelativeDim(20px, $screen-size);
+    padding: $header-wrapper-padding 0;
+  }
+  @include vars.for-size(desktop) {
+    $screen-size: 1536;
+    $header-wrapper-padding: vars.getRelativeDim(20px, $screen-size);
+    padding: $header-wrapper-padding 0;
+  }
+  @include vars.for-size(desktop-md) {
+    $screen-size: 1366;
+    $header-wrapper-padding: vars.getRelativeDim(20px, $screen-size);
+    padding: $header-wrapper-padding 0;
+  }
+  @include vars.for-size(desktop-sm) {
+    $screen-size: 1280;
+    $header-wrapper-padding: vars.getRelativeDim(20px, $screen-size);
+    padding: $header-wrapper-padding 0;
+  }
+
+  > header {
+    width: calc(100% - #{$header-wrapper-padding * 2 + $header-padding-x * 2});
+    max-width: 1180px;
+    margin: auto;
+    padding: $header-padding-y $header-padding-x;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include vars.glassmorphism;
+
+    @include vars.for-size(desktop-lg) {
+      $screen-size: 1680;
+      $header-wrapper-padding: vars.getRelativeDim(20px, $screen-size);
+      $header-padding-x: vars.getRelativeDim(32px, $screen-size);
+      $header-padding-y: vars.getRelativeDim(24px, $screen-size);
+      width: calc(100% - #{$header-wrapper-padding * 2 + $header-padding-x * 2});
+      padding: $header-padding-y $header-padding-x;
+    }
+    @include vars.for-size(desktop) {
+      $screen-size: 1536;
+      $header-wrapper-padding: vars.getRelativeDim(20px, $screen-size);
+      $header-padding-x: vars.getRelativeDim(32px, $screen-size);
+      $header-padding-y: vars.getRelativeDim(24px, $screen-size);
+      width: calc(100% - #{$header-wrapper-padding * 2 + $header-padding-x * 2});
+      padding: $header-padding-y $header-padding-x;
+    }
+    @include vars.for-size(desktop-md) {
+      $screen-size: 1366;
+      $header-wrapper-padding: vars.getRelativeDim(20px, $screen-size);
+      $header-padding-x: vars.getRelativeDim(32px, $screen-size);
+      $header-padding-y: vars.getRelativeDim(24px, $screen-size);
+      width: calc(100% - #{$header-wrapper-padding * 2 + $header-padding-x * 2});
+      padding: $header-padding-y $header-padding-x;
+    }
+    @include vars.for-size(desktop-sm) {
+      $screen-size: 1280;
+      $header-wrapper-padding: vars.getRelativeDim(20px, $screen-size);
+      $header-padding-x: vars.getRelativeDim(32px, $screen-size);
+      $header-padding-y: vars.getRelativeDim(24px, $screen-size);
+      width: calc(100% - #{$header-wrapper-padding * 2 + $header-padding-x * 2});
+      padding: $header-padding-y $header-padding-x;
+    }
+
+    .left_wrapper {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: vars.getRelativeDim(40px, $screen-size);
+
+      @include vars.for-size(desktop-lg) {
+        $screen-size: 1680;
+        gap: vars.getRelativeDim(40px, $screen-size);
+      }
+      @include vars.for-size(desktop) {
+        $screen-size: 1536;
+        gap: vars.getRelativeDim(40px, $screen-size);
+      }
+      @include vars.for-size(desktop-md) {
+        $screen-size: 1366;
+        gap: vars.getRelativeDim(40px, $screen-size);
+      }
+      @include vars.for-size(desktop-sm) {
+        $screen-size: 1280;
+        gap: vars.getRelativeDim(40px, $screen-size);
+      }
+
+      .logo_wrapper {
+        width: fit-content;
+        color: vars.$white;
+
+        font-size: vars.getRelativeDim(28px, $screen-size);
+        font-weight: 800;
+
+        @include vars.for-size(desktop-lg) {
+          $screen-size: 1680;
+          font-size: vars.getRelativeDim(28px, $screen-size);
+        }
+        @include vars.for-size(desktop) {
+          $screen-size: 1536;
+          font-size: vars.getRelativeDim(28px, $screen-size);
+        }
+        @include vars.for-size(desktop-md) {
+          $screen-size: 1366;
+          font-size: vars.getRelativeDim(28px, $screen-size);
+        }
+        @include vars.for-size(desktop-sm) {
+          $screen-size: 1280;
+          font-size: vars.getRelativeDim(28px, $screen-size);
+        }
+
+        > img {
+          width: vars.getRelativeDim(28px, $screen-size);
+
+          @include vars.for-size(desktop-lg) {
+            $screen-size: 1680;
+            width: vars.getRelativeDim(28px, $screen-size);
+          }
+          @include vars.for-size(desktop) {
+            $screen-size: 1536;
+            width: vars.getRelativeDim(28px, $screen-size);
+          }
+          @include vars.for-size(desktop-md) {
+            $screen-size: 1366;
+            width: vars.getRelativeDim(28px, $screen-size);
+          }
+          @include vars.for-size(desktop-sm) {
+            $screen-size: 1280;
+            width: vars.getRelativeDim(28px, $screen-size);
+          }
+        }
+
+        > span {
+          font-weight: 400;
+        }
+      }
+
+      .navigation {
+        display: flex;
+        gap: vars.getRelativeDim(40px, $screen-size);
+        font-size: vars.getRelativeDim(18px, $screen-size);
+
+        @include vars.for-size(desktop-lg) {
+          $screen-size: 1680;
+          gap: vars.getRelativeDim(40px, $screen-size);
+          font-size: vars.getRelativeDim(18px, $screen-size);
+        }
+        @include vars.for-size(desktop) {
+          $screen-size: 1536;
+          gap: vars.getRelativeDim(40px, $screen-size);
+          font-size: vars.getRelativeDim(18px, $screen-size);
+        }
+        @include vars.for-size(desktop-md) {
+          $screen-size: 1366;
+          gap: vars.getRelativeDim(40px, $screen-size);
+          font-size: vars.getRelativeDim(18px, $screen-size);
+        }
+        @include vars.for-size(desktop-sm) {
+          $screen-size: 1280;
+          gap: vars.getRelativeDim(40px, $screen-size);
+          font-size: vars.getRelativeDim(18px, $screen-size);
+        }
+
+        .tab {
+          text-decoration: none;
+          color: vars.$white;
+
+          &.active_tab {
+            color: vars.$primary-color;
+          }
+        }
+      }
+    }
+  }
+}

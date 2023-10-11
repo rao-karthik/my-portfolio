@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './container/App';
 
-const rootElement: HTMLElement | null = document.getElementById('root');
+const rootElement: HTMLElement | null = document.getElementById('app');
 
 if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
