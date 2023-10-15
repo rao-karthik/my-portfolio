@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 
 import Header from '../../components/Common/Header/Header';
 
+import useHeaderHeight from '../../CustomHooks/useHeaderHeight/useHeaderHeight';
+
 import styles from './Layout.module.scss';
 
 interface ILayout {
@@ -9,13 +11,15 @@ interface ILayout {
 }
 
 const Layout = ({ children }: ILayout) => {
+  const headerHeight = useHeaderHeight();
+
   return (
     <div className={styles?.layout_wrapper}>
       <div className={styles?.app_bg}></div>
-      <div>
-        <Header />
-      </div>
-      <div>{children}</div>
+
+      <Header />
+
+      <div style={{ paddingTop: headerHeight }}>{children}</div>
     </div>
   );
 };

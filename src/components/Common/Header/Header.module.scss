@@ -9,6 +9,8 @@ $header-padding-y: vars.getRelativeDim(24px, $screen-size);
   width: 100%;
   padding: $header-wrapper-padding 0;
   overflow: hidden;
+  position: fixed;
+  z-index: 1000;
 
   @include vars.for-size(desktop-lg) {
     $screen-size: 1680;

@@ -25,7 +25,7 @@ const headerTabs = [
 
 const Header = () => {
   return (
-    <div className={styles?.header_wrapper}>
+    <div className={styles?.header_wrapper} id="header">
       <header>
         <div className={styles?.left_wrapper}>
           <div className={styles?.logo_wrapper}>
